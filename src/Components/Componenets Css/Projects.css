@@ -33,9 +33,9 @@
 .project-card {
   width: 30%;
   margin-bottom: 40px;
-  background: linear-gradient(180deg, rgb(68, 5, 186) 0%, rgb(1, 76, 188) 100%);
+  background: linear-gradient(180deg, rgba(68, 5, 186, 0.8) 0%, rgba(1, 76, 188, 0.8) 100%);
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.65);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); */
   transition: transform 0.3s ease-in-out;
   border-radius: 20px;
   position: relative; /* Add relative positioning */
