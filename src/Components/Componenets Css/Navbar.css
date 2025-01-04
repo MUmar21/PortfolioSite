@@ -1,6 +1,6 @@
 /* Main Sidebar Styling */
 .sidebar {
-    background: linear-gradient(115deg, rgba(15, 1, 141, 1) 0%, rgba(0, 11, 28, 1) 100%);
+    background: linear-gradient(115deg, rgba(15, 1, 141, 0.6) 0%, rgba(0, 11, 28, 0.3) 100%);
     font-family: "Exo 2", sans-serif;
     position: fixed;
     top: 50%; /* Center vertically */
@@ -15,7 +15,7 @@
     pointer-events: none; /* Disable pointer events to avoid blocking content */
     border-radius: 50px;
     padding: 2em 0; /* Add padding for better spacing */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add some shadow for a sleek effect */
+    /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); Add some shadow for a sleek effect */
 }
 
 .navbar {
@@ -45,7 +45,7 @@
     border-radius: 50%;
     text-decoration: none;
     color: #ffffff;
-    background: linear-gradient(115deg, rgb(60, 2, 167) 0%, rgba(0, 69, 173, 0.8) 100%);
+    background: linear-gradient(115deg, rgba(50, 6, 132, 0.9) 0%, rgb(0, 28, 71) 100%);
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -57,7 +57,7 @@
 }
 
 .navbar ul li a:hover {
-    background-color: rgb(226, 210, 255); /* Enhanced hover effect */
+    background: linear-gradient(115deg, rgb(76, 2, 212) 0%, rgba(1, 81, 202, 1) 100%);
     transform: scale(1.05);
 }
 

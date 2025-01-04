@@ -12,7 +12,9 @@ function Hero() {
   const scrollToProjects = () => {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   };
-
+  const openHireMe = () => {
+    window.open("https://www.upwork.com/freelancers/~01d3c8ad355e5adf9f?mp_source=share", "_blank", "noopener,noreferrer");
+  };
   return (
     <section className="hero" id="home">
       <div className="hero-layout">
@@ -22,13 +24,7 @@ function Hero() {
           <h2>I am Muhammad Umar</h2>
           <h1>Game Developer</h1>
           <p>
-            I am a passionate Game Developer specializing in Unity and C# programming. 
-            With experience in both 2D and 3D games, 
-            I develop high-quality games for mobile and PC platforms. 
-            Currently, I work as a Game Developer at Section Soft and offer my services as a freelancer, 
-            helping clients bring their game ideas to life. 
-            I am also working on a personal 3D action-adventure game project.
-          </p>
+          I am a versatile Developer with expertise in Unity, C#, and web technologies like HTML, CSS, JavaScript, and React. I create engaging 2D and 3D games for mobile, PC, and WebGL platforms, and build dynamic, responsive websites. Proficient in Git, GitHub, and Git LFS, I also have experience hosting sites on GitHub Pages. Skilled in UI design and integration, I ensure seamless user experiences across games and web applications. This portfolio, developed in React, showcases my ability to combine design and functionality. Whether working solo or in a team, I deliver high-quality projects that exceed expectations. </p>
           {/* Work Experience Section */}
           <div className="work-experience">
             <h3>Work Experience:</h3>
@@ -43,6 +39,7 @@ function Hero() {
           <div className="hero-buttons">
             <button onClick={scrollToProjects}>View My Work</button>
             <button onClick={scrollToFooter}>Contact Me</button>
+            <button onClick={openHireMe}>Hire Me</button>
           </div>
 
           {/* Social Media Links */}

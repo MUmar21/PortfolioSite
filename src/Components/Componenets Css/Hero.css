@@ -34,8 +34,8 @@
   /* background: linear-gradient(115deg, rgb(0, 9, 22) 0%, rgba(0,35,89,1) 100%); */
   text-align: left;
   color: #ffffff;
-  max-width: 40%;
-  padding: 0 2em 2em;
+  max-width:50%;
+  padding: 0 1em;
   margin-left: 8em;
   border-radius: 50px;
   animation: contentAppear 1.5s ease; /* Simple animation for logo */
@@ -75,9 +75,10 @@
 
 .hero-content p {
   font-size: 1.4rem;
-  line-height: 1.6;
-  width: 100%;
-  margin-bottom: 1.5em;
+  font-weight: 600;
+  line-height: 1.5;
+  width: 90%;
+  margin-bottom: 1em;
 }
 
 /* Button Styling */
@@ -92,14 +93,18 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  background: linear-gradient(115deg, rgba(25, 0, 71, 0.7) 0%, rgba(0, 73, 182, 0.8) 100%);
+  background: linear-gradient(115deg, rgba(50, 6, 132, 0.9) 0%, rgb(0, 28, 71) 100%);
   color: white;
   transition: background-color 0.3s ease;
 }
 
 .hero-buttons button:hover {
-  background-color: #8530f4;
+  background: linear-gradient(115deg, rgb(76, 2, 212) 0%, rgba(1, 81, 202, 1) 100%);
   transform: scale(1.05);
+}
+.work-experience{
+  font-weight: 600;
+  font-size: 1em;
 }
 
 /* Social Media Links */

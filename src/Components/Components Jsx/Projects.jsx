@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 export const projectsData = [
     {
-        title: "KiboNoKen",
+        title: "Kibo No Ken",
         description: "Kibo No Ken, is a personal project I’ve been developing, designed as a 3D isometric action-adventure game for both PC and mobile platforms. In this story-driven game, you play as a young prince on a quest to find a legendary sword. Along the way, you'll face enemies, powerful demons, and the dark lord who has seized control of the prince's kingdom. Your goal is to defeat these foes, avenge the prince's father, and free the people from oppression. With captivating animations, thrilling combat, and a rich storyline, Kibo No Ken offers an immersive blend of adventure and action.",
         titleImages: ["./images/kbk.png", "./images/kbk1.png", "./images/kbk2.png", "./images/kbk3.png", "./images/kbk4.png", "./images/kbk10.png", "./images/kbk6.png", "./images/kbk7.png", "./images/kbk12.png"], // Add more images here 
         images: ["../public/images/kbk.png","../public/images/kbk1.png", "../public/images/kbk2.png", "../public/images/kbk3.png", "../public/images/kbk4.png", "../public/images/kbk10.png", "../public/images/kbk6.png", "../public/images/kbk7.png", "../public/images/kbk12.png"], // Add more images here
@@ -62,6 +62,51 @@ export const projectsData = [
         Category: "Gaming",
         Client: "ENGIE Vianeo"
     },
+    {
+        title: "Basketball-Dunk-Hoop-Game",
+        description: "Basketball Dunk Hoop Game is a fast-paced mobile game where players swipe to dunk the ball into the hoop and complete level objectives. Players must avoid obstacles like bombs and balloons while aiming to meet the level's dunk requirements before time runs out. The game features two modes: Static Mode, where the hoop stays still, and Moveable Mode, where the hoop moves across the screen, adding extra challenge. Players can also enjoy bonus levels to pop balloons for reward coins and customize their gameplay with different ball skins. With various environments, beautiful relaxing music, immersive sound effects, and exciting rewards, it's a fun and challenging game for all!",
+        titleImages: ["./images/Basket1.jpg", "./images/Basket2.jpg", "./images/Basket3.jpg","./images/Basket4.jpg", "./images/Basket5.jpg","./images/Basket6.jpg"],
+        images: ["../public/images/Basket1.jpg", "../public/images/Basket2.jpg", "../public/images/Basket3.jpg", "../public/images/Basket4.jpg", "../public/images/Basket5.jpg","../public/images/Basket6.jpg"],
+        link: "https://www.youtube.com/watch?v=9G5I2D0OPd4",
+        Category: "Gaming",
+        Client: "Section Soft"
+    },
+    {
+        title: "AI Obstacle Avoidance and Track Navigation Car Simulation",
+        description: "This simulation project showcases an advanced AI-driven car that autonomously navigates a road track, avoiding obstacles and maintaining a smooth driving experience. Using front-facing sensors, the car detects and avoids obstacles while utilizing raycasting technology to stay within the road boundaries, even on curved paths. The car adjusts its speed and velocity to ensure smooth movement, maintaining optimal performance on inclines and declines. It can take turns with precision, keep steady on the road, and automatically stop when the road ends. Created for a client, this car simulation integrates cutting-edge AI techniques to deliver a realistic and efficient driving experience.",
+        titleImages: ["./images/AICar1.jpg", "./images/AICar2.jpg", "./images/AICar3.jpg","./images/AICar4.jpg", "./images/AICar5.jpg","./images/AICar6.jpg", "./images/AICar7.jpg","./images/AICar8.jpg","./images/AICar9.jpg","./images/AICar10.jpg"],
+        images: ["../public/images/AICar1.jpg", "../public/images/AICar2.jpg", "../public/images/AICar3.jpg", "../public/images/AICar4.jpg", "../public/images/AICar5.jpg","../public/images/AICar6.jpg","../public/images/AICar7.jpg","../public/images/AICar8.jpg","../public/images/AICar9.jpg","../public/images/AICar10.jpg"],
+        link: "https://youtu.be/qX_3virmqWA",
+        Category: "Gaming",
+        Client: "Freelance"
+    },
+    {
+        title: "Car Stunt Game",
+        description: "Car Stunt Game is an exciting and action-packed mobile driving game where players must navigate through challenging levels, reach checkpoints, and make it to the end of the map. The game features dynamic environments with various obstacles and hurdles, requiring players to skillfully avoid them while jumping off ramps for thrilling stunts. Each level presents unique challenges, keeping the gameplay fresh and engaging. With realistic car controls, the car accelerates, brakes, noses, and turns based on a true-to-life driving mechanism. Players can choose from multiple control options, including gyro, buttons, or steering wheel controls, offering a personalized driving experience. Additionally, players can purchase and select from a variety of cars, each with its own speed and specifications, allowing for customization and strategy. This fun and adventurous game is perfect for players who love to face challenges, perform exciting stunts, and choose the perfect car for the ride!",
+        titleImages: ["./images/CarStunt1.jpg", "./images/CarStunt2.jpg", "./images/CarStunt3.jpg","./images/CarStunt4.jpg", "./images/CarStunt5.jpg","./images/CarStunt6.jpg", "./images/CarStunt7.jpg","./images/CarStunt8.jpg"],
+        images: ["../public/images/CarStunt1.jpg", "../public/images/CarStunt2.jpg", "../public/images/CarStunt3.jpg", "../public/images/CarStunt4.jpg", "../public/images/CarStunt5.jpg","../public/images/CarStunt6.jpg","../public/images/CarStunt7.jpg","../public/images/CarStunt8.jpg"],
+        link: "",
+        Category: "Gaming",
+        Client: "Section Soft"
+    },
+    {
+        title: "Park The Car Game",
+        description: "Park The Car Game is a challenging and immersive top-down perspective parking simulation game, where players must drive their car through various levels, hitting checkpoints and ultimately parking the car without colliding with obstacles or road edges. The game tests the player's patience and precision, offering a realistic driving experience that requires smooth control and careful maneuvering. With multiple levels, maps, and modes to explore, players must complete each level to unlock new ones. The game features a highly realistic car driving mechanism, making it both engaging and rewarding as players navigate tight spaces and tricky turns to park their car perfectly. Available on mobile devices, this game is perfect for those who enjoy testing their driving skills and mastering the art of parking.",
+        titleImages: ["./images/CarParking1.jpg", "./images/CarParking2.jpg", "./images/CarParking3.jpg","./images/CarParking4.jpg", "./images/CarParking5.jpg","./images/CarParking6.jpg"],
+        images: ["../public/images/CarParking1.jpg", "../public/images/CarParking2.jpg", "../public/images/CarParking3.jpg", "../public/images/CarParking4.jpg", "../public/images/CarParking6.jpg","../public/images/CarParking5.jpg"],
+        link: "",
+        Category: "Gaming",
+        Client: "Section Soft"
+    },
+    // {
+    //     title: "Complex UI Integration",
+    //     description: "It is a project I completed for a client where I seamlessly integrated their custom UI design into Unity, ensuring high responsiveness across various screen sizes. The design was intricate, featuring numerous components, which required careful attention to detail and optimization for fluid user interaction. I utilized advanced techniques to ensure the UI maintained its functionality and aesthetic integrity on different devices, providing a smooth and intuitive experience. This project showcases my ability to handle complex UI designs and deliver results that meet the client's specifications, enhancing the overall user interface experience.",
+    //     titleImages: ["./images/UIGame1.png", "./images/UIGame2.png", "./images/UIGame3.png","./images/UIGame4.png", "./images/UIGame5.png","./images/UIGame6.png","./images/UIGame7.jpg"],
+    //     images: ["../public/images/UIGame1.png", "../public/images/UIGame2.png", "../public/images/UIGame3.png", "../public/images/UIGame4.png", "../public/images/UIGame5.jpg","../public/images/UIGame6.jpg","../public/images/UIGame7.png"],
+    //     link: "",
+    //     Category: "Gaming",
+    //     Client: "Section Soft"
+    // },
     // Add more project objects here...
 ];
 
