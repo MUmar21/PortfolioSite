@@ -5,6 +5,7 @@ import './App.css'
 import Header  from './Components/Components Jsx/Header'
 import Hero  from './Components/Components Jsx/Hero'
 import Projects  from './Components/Components Jsx/Projects'
+import ProjectPage  from './Components/Components Jsx/ProjectPage'
 import Contact  from './Components/Components Jsx/Contact'
 import Navbar from './Components/Components Jsx/Navbar'
 import Skills from './Components/Components Jsx/Skills'
@@ -80,6 +81,7 @@ function App() {
         >
           <Footer />
         </motion.div>
+        {/* <ProjectPage /> */}
       </div>
     </>
   )

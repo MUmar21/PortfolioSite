@@ -1,6 +1,7 @@
 #root {
   /* background-color: #131120; */
-  background: radial-gradient(#9320ff,#4a1397);
+  background: radial-gradient(circle, rgb(21, 0, 115) 0%, rgb(0, 21, 51) 100%);  z-index: 1000;
+  /* background: #000517; */
   max-width: 100%;
   margin: 0 auto;
   /* padding: 0.5rem; */

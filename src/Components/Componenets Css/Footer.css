@@ -1,10 +1,11 @@
 .footer {
+    background: linear-gradient(180deg, rgb(68, 5, 186) 0%, rgb(1, 76, 188) 100%);
     font-family: "Exo 2", sans-serif;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     text-align: center;
     color: white;
-    position: relative;
-    margin-bottom: 10px; /* Add bottom margin to keep it above the navbar */
+    /* position: relative; */
+    margin-top: 40px;
 }
 
 .footer-content {
@@ -13,6 +14,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    padding: 1em;
 }
 
 .footer-logo {
@@ -38,8 +40,10 @@
 
 .footer-bottom p {
     font-size: 1.1rem;
-    color: #ffaace;
-}
+    color: #ffffff;
+    text-shadow:  0 0 10px rgba(29, 214, 255, 0.3), /* Main glow */
+                0 0 20px rgba(0, 204, 255, 0.2), /* Outer glow */
+                0 0 30px rgba(27, 142, 199, 0.3);  }
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {

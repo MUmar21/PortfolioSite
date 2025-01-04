@@ -1,10 +1,4 @@
-// import '../Componenets Css/Projects.css';
-// import { useState } from 'react';
-
-import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import '../Componenets Css/Projects.css';
-import ProjectPage  from './ProjectPage'
 
 const projectsData = [
     {
@@ -12,7 +6,6 @@ const projectsData = [
         description: "Kibo No Ken, is a personal project I’ve been developing, designed as a 3D isometric action-adventure game for both PC and mobile platforms. In this story-driven game, you play as a young prince on a quest to find a legendary sword. Along the way, you'll face enemies, powerful demons, and the dark lord who has seized control of the prince's kingdom. Your goal is to defeat these foes, avenge the prince's father, and free the people from oppression. With captivating animations, thrilling combat, and a rich storyline, Kibo No Ken offers an immersive blend of adventure and action.",
         images: ["./images/kbk.png","./images/kbk1.png", "./images/kbk2.png", "./images/kbk3.png", "./images/kbk4.png", "./images/kbk10.png", "./images/kbk6.png", "./images/kbk7.png", "./images/kbk12.png"], // Add more images here
         link: "https://www.youtube.com/watch?v=wHYxLtUvvns",
-        projectPage: <ProjectPage />,
         Category: "Gaming",
         Client: "Personal Project"
     },
@@ -59,56 +52,4 @@ const projectsData = [
     // Add more project objects here...
 ];
 
-function Projects() {
-    return (
-        <section className="projects" id="projects">
-            <div className="projects-container">
-                <h2>My Projects</h2>
-                <div className="projects-grid">
-                    {projectsData.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
-function ProjectCard({ project }) {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const nextImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
-        );
-    };
-
-    const prevImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
-        );
-    };
-    // const navigate = useNavigate();
-    return (
-        <div className="project-card">
-            <div className="image-container">
-                <button className="arrow left-arrow" onClick={prevImage}>&lt;</button>
-                <img src={project.images[currentImageIndex]} alt={project.title} />
-                <button className="arrow right-arrow" onClick={nextImage}>&gt;</button>
-            </div>
-            <h3>{project.title}</h3>
-            {/* <Link to={`/project/${encodeURIComponent(project.title)}`}>
-      </Link> */}
-            {/* <button onClick={()=> navigate("/Skills")}>View Project</button> */}
-            <a href={project.projectPage}>Project URL</a>
-            {/* <div className='card-content'>
-            <h4>Category:<p> {project.Category}</p></h4>
-            <h4>Client: <p>{project.Client}</p></h4>
-            <h4>Description:</h4>
-            <p>{project.description}</p>
-            </div> */}
-        </div>
-    );
-}
-
-export default Projects;
+export default projectsData;

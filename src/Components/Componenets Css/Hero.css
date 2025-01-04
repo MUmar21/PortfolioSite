@@ -12,14 +12,15 @@
   /* background: radial-gradient(#9320ff,#4a1397); */
   font-family: "Exo 2", sans-serif;
   background-size: cover;
+  background: linear-gradient(115deg, rgba(44, 3, 120, 1) 0%, rgba(0,64,163,1) 100%);
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  /* padding: 2em; */
   flex-direction: column;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  /* margin-top: 3em; */
+  margin-bottom: 2.5em;
 }
 .hero-layout {
   display: flex;
@@ -30,28 +31,28 @@
 }
 
 .hero-content {
-  background-color: #371B70;
+  /* background: linear-gradient(115deg, rgb(0, 9, 22) 0%, rgba(0,35,89,1) 100%); */
   text-align: left;
-  color: #fbf4f9;
+  color: #ffffff;
   max-width: 40%;
   padding: 0 2em 2em;
   margin-left: 8em;
   border-radius: 50px;
   animation: contentAppear 1.5s ease; /* Simple animation for logo */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); */
 }
-.hero-content:hover{
-  border: 3px solid #ff217e;
-  box-shadow:  0 0 10px rgb(255, 29, 123,0.3), /* Main glow */
-                0 0 20px rgb(255, 0, 255, 0.2), /* Outer glow */
-                0 0 30px rgba(199, 27, 102, 0.3); 
-}
+/* .hero-content:hover{
+  border: 3px solid #28f0ed;
+  box-shadow:  0 0 10px rgba(29, 214, 255, 0.3), /* Main glow */
+                /* 0 0 20px rgba(0, 204, 255, 0.2), Outer glow */
+                /* 0 0 30px rgba(27, 142, 199, 0.3);  */
+/* } */
 .hero h1 {
-  color: #fff1fa;
+  color: #efffff;
   /* text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); */
-  text-shadow:  0 0 10px rgb(255, 29, 123,0.3), /* Main glow */
-                0 0 20px rgb(255, 0, 255, 0.2), /* Outer glow */
-                0 0 30px rgba(199, 27, 102, 0.3); /* Soft glow */
+  text-shadow:  0 0 10px rgba(29, 214, 255, 0.3), /* Main glow */
+              0 0 20px rgba(0, 204, 255, 0.2), /* Outer glow */
+              0 0 30px rgba(27, 142, 199, 0.3); 
   font-size: 3.2em;
   margin-bottom: 0.1em;
 }
@@ -61,15 +62,15 @@
   line-height: 1.6;
   width: 55%;
   margin-bottom: -1em;
-  color: #ff217e;
+  color: #07eeff;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 
 }
 .hero h3{
   font-size: 1.5em;
-  text-shadow:  0 0 10px rgb(255, 29, 123,0.3), /* Main glow */
-  0 0 20px rgb(255, 0, 255, 0.2), /* Outer glow */
-  0 0 30px rgba(199, 27, 102, 0.3); /* Soft glow */
+  text-shadow:  0 0 10px rgba(29, 214, 255, 0.3), /* Main glow */
+              0 0 20px rgba(0, 204, 255, 0.2), /* Outer glow */
+              0 0 30px rgba(27, 142, 199, 0.3); 
 }
 
 .hero-content p {
@@ -91,7 +92,7 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  background-color: #f83486;
+  background: linear-gradient(115deg, rgba(25, 0, 71, 0.7) 0%, rgba(0, 73, 182, 0.8) 100%);
   color: white;
   transition: background-color 0.3s ease;
 }
@@ -124,19 +125,24 @@
   max-width: 50%;
   height: auto;
   margin-right: 15em;
-  border: 5px solid #b348ff;
+  border: 5px solid #1d4eff;
+  box-shadow: 
+  0 0 10px rgba(29, 214, 255, 0.3), /* Main glow */
+              0 0 20px rgba(0, 204, 255, 0.2), /* Outer glow */
+              0 0 30px rgba(27, 142, 199, 0.3); 
+  border-radius: 50px;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  transform: rotate(0.015turn);
+  /* box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8); */
+  /* transform: rotate(0.015turn); */
   animation: ImageAppear 0.6s ease; /* Simple animation for logo */
 }
 .about-image img:hover{
   transform: scale(1.05);
-  border: 5px solid #ff1d7b;
-  box-shadow: 
-  0 0 15px rgb(255, 29, 123, 0.5), /* Main glow */
-  0 0 25px rgba(178, 69, 255, 0.6), /* Outer glow */
-  0 0 35px rgba(178, 69, 255, 0.4); /* Soft glow */
+  /* border: 5px solid #1d4eff; */
+  /* box-shadow:  */
+  /* 0 0 10px rgba(29, 214, 255, 0.3), Main glow */
+              /* 0 0 20px rgba(0, 204, 255, 0.2), Outer glow */
+              /* 0 0 30px rgba(27, 142, 199, 0.3);  */
 }
 
 .work-experience li{
