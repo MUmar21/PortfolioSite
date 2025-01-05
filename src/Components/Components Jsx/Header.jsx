@@ -6,7 +6,7 @@ function Header(){
       <header className="header">
       <div className="logo-container">
         {/* Add your logo image */}
-        {/* <img src="./images/m.png" alt="My Logo" className="logo" /> */}
+        <img src="./images/logo.png" alt="MUS" className="logo" />
       </div>
       <div className="email-container">
         {/* Add your email, clicking it will open Gmail */}

@@ -1,0 +1,135 @@
+/* ProjectPage.css */
+
+body {
+    margin: 0;
+    font-family: "Exo 2", sans-serif;
+    background: radial-gradient(circle, rgba(21, 0, 115, 0.9) 0%, rgba(0, 21, 51, 0.9) 100%);  z-index: 1000;
+    color: #ffffff;
+  }
+  
+  .project-page {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5em;
+    gap: 5em;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .project-left,
+  .project-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .image-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    margin-bottom: 1em;
+    /* border-radius: 10px; */
+    /* overflow: hidden; */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #295eff;
+    border-radius: 30px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+    border-radius: 50%;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .project-title {
+    font-size: 2em;
+    /* margin: 0.5em 0; */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #fff;
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    background: linear-gradient(140deg, rgba(68, 5, 186, 0.8) 0%, rgba(1, 76, 188, 0.8) 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .project-link:hover {
+    background-color: #0e003f;
+  }
+  
+  .project-meta p {
+    margin: 0.2em 0;
+  }
+  
+  .project-right h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .project-right p {
+    line-height: 1.6;
+    font-size: 1.5em;
+    text-align: left;
+    color: #d1d1e0;
+  }
+  .back-button{
+    background: linear-gradient(140deg, rgba(68, 5, 186, 0.8) 0%, rgba(1, 76, 188, 0.8) 100%);
+    width: 6em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .back-button:hover {
+    background-color: #3700ff;
+  }
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .project-page {
+      flex-direction: column;
+      padding: 1em;
+    }
+  
+    .image-slider {
+      height: 200px;
+    }
+  
+    .project-title {
+      font-size: 1.5em;
+    }
+  
+    .project-link {
+      font-size: 0.9em;
+    }
+  }
+  

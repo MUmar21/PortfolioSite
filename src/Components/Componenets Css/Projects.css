@@ -1,11 +1,12 @@
 .projects {
   font-family: "Exo 2", sans-serif;
-  background-color: #371B70;
-  border-radius: 10px;
-  padding: 4em 2em;
-  max-width: 1340px;
+  background: linear-gradient(115deg, rgba(44, 3, 120, 1) 0%, rgba(0,64,163,1) 100%);
+  /* border-radius: 10px; */
+  padding: 0em 5em;
   text-align: center;
-  margin: 0 auto;
+  max-width: 100%;
+  /* margin: 0 auto; */
+  margin-bottom: 2em;
 }
 
 .projects-container {
@@ -13,24 +14,30 @@
 }
 
 .projects h2 {
-  color: #ff1d7b;
-  text-shadow: 0 0 6px hsla(0, 0%, 0%, 0.5);
+  color: #efffff;
+  text-shadow:  0 0 10px rgba(29, 214, 255, 0.3), /* Main glow */
+              0 0 20px rgba(0, 204, 255, 0.2), /* Outer glow */
+              0 0 30px rgba(27, 142, 199, 0.3);   
   font-size: 3rem;
-  margin-bottom: 40px;
+  padding: 1.5em;
+  margin-bottom: 1em;
+  /* margin-bottom: 40px; */
 }
 
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .project-card {
   width: 30%;
   margin-bottom: 40px;
-  background-color: #5500ff;
+  background: linear-gradient(180deg, rgba(68, 5, 186, 0.8) 0%, rgba(1, 76, 188, 0.8) 100%);
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); */
   transition: transform 0.3s ease-in-out;
   border-radius: 20px;
   position: relative; /* Add relative positioning */
@@ -54,7 +61,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #7945e2ee;
+  background: linear-gradient(180deg, rgb(68, 5, 186) 0%, rgb(1, 76, 188) 100%);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -90,7 +97,7 @@
 
 .project-card p {
   font-size: 1rem;
-  color: #f8def6;
+  color: #ffffff;
   margin-left: 5px;
   text-align: left;
 }
@@ -98,25 +105,48 @@
 .project-card a {
   text-decoration: none;
   color: #ffffff;
-  border: 3px solid #ff1d7b;
-  background-color: #c941ff6a;
-  padding: 0.1em;
+  /* border: 3px solid #681dff; */
+  background: linear-gradient(115deg, rgba(25, 0, 71, 0.7) 0%, rgba(2, 29, 68, 0.39) 100%);
+  padding: 0.5em;
+  border-radius: 10px;
 }
 
 .project-card a:hover {
-  color: #f0adc9;
+  color: #bcaaff;
 }
 .card-content{
-  background-color: #371B70;
+  background: linear-gradient(115deg, rgba(41, 0, 118, 0.7) 0%, rgba(1, 26, 62, 0.8) 100%);
   border-radius: 25px;
   padding: 5px;
   margin-top: 1em;
 }
 
 @media (max-width: 768px) {
+  .project-grid{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
   .project-card {
-      width: 85%;
-      margin: 0 auto;
-      margin-bottom: 2em;
+      width: 100%;
+  }
+ 
+  .projects-container h2{
+    width: 80%;
+    font-size: 2em;
   }
 }
+  @media screen and (max-width: 480px) {
+    .projects-grid {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    .project-card{
+      width: 100%;
+    }
+    .projects-container h2{
+      width: 80%;
+      font-size: 2em;
+    }
+  }

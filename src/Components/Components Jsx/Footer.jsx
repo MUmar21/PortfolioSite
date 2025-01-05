@@ -4,7 +4,7 @@ function Footer(){
     return(
         <footer className ="footer" id="footer">
         <div className ="footer-content">
-            <img src="./images/logo.png" alt="Your Logo" className ="footer-logo"/>
+            <img src="./images/logo.png" alt="MUS" className ="footer-logo"/>
             <ul className ="footer-info">
                 <li>Contact number: +92 320 1930958 </li>
                 <li>Email: umarsaddiq1212@gmail.com</li>
