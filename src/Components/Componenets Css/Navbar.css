@@ -82,7 +82,8 @@
         padding: 0.5em 0;
         border-radius: 0; /* Remove border radius */
         box-shadow: none; /* Remove shadow for cleaner look */
-        background-color: #10011cef; /* Consistent background color */
+        background: linear-gradient(115deg, rgba(15, 1, 141, 0.9) 0%, rgba(0, 11, 28, 0.9) 100%);
+        /* background-color: #10011cef; Consistent background color */
     }
 
     .navbar {
@@ -97,10 +98,11 @@
     }
 
     .navbar ul li a {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         font-size: 0.9rem;
         margin: 0; /* Remove extra margins */
+        margin-right: 5em; /* Adjust spacing for smaller screens */
     }
 }
 
@@ -116,13 +118,14 @@
         justify-content: center; /* Center items horizontally */
         flex-direction: row; /* Horizontal layout */
         padding: 0.3em 0;
-        background-color: #10011cef; /* Consistent background color */
+        background: linear-gradient(115deg, rgba(15, 1, 141, 0.9) 0%, rgba(0, 11, 28, 0.9) 100%);
+        /* background-color: #10011cef; Consistent background color */
     }
 
     .navbar {
         flex-direction: row;
         justify-content: center;
-        gap: 0.3rem;
+        gap: 1rem;
     }
 
     .navbar ul {
@@ -133,7 +136,8 @@
     .navbar ul li a {
         width: 50px;
         height: 50px;
-        font-size: 0.75rem;
-        margin-right: 1.5em; /* Adjust spacing for smaller screens */
+        padding: 0.1em;
+        font-size: 0.65rem;
+        margin-right: 2em; /* Adjust spacing for smaller screens */
     }
 }

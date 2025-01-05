@@ -160,14 +160,14 @@
   0% {
     opacity: 0;
     transform: scale(0.5) rotate(0.1turn);
-
   }
 80%{
   opacity: 1;
   transform: scale(1.15) ;
 }  
   100% {
-    transform: scale(1) rotate(0.015turn);
+    transform: scale(1);
+    /* transform: scale(1) rotate(0.015turn); */
   }
 }
 @keyframes contentAppear {
@@ -183,6 +183,7 @@
 @media (max-width: 1024px) {
   .hero {
     padding: 2em 1em;
+    margin-top: 2em;
   }
   
   .hero-layout {
@@ -233,6 +234,9 @@
 
 /* For smaller tablets and large phones */
 @media (max-width: 768px) {
+  .hero{
+    margin-top: 2em;
+  }
   .hero-content {
     max-width: 90%;
     padding: 0;
@@ -273,6 +277,7 @@
   .hero {
     height: auto;
     padding: 1.5em;
+    margin-top: 2em;
   }
   
   .hero-layout {
@@ -282,7 +287,7 @@
   .hero-content {
     max-width: 100%;
     margin-left: 0em;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 
   }
 
