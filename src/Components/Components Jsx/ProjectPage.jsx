@@ -35,7 +35,7 @@ const ProjectPage = () => {
             &#8249;
           </button>
           <img
-            src={project.titleImages[currentImageIndex]} // Should work now
+            src={import.meta.env.BASE_URL + project.titleImages[currentImageIndex]} // Should work now
             alt={project.title}
             className="project-image"
           />

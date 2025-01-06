@@ -83,7 +83,7 @@ function App() {
 
 function AppWrapper() {
   return (
-    <BrowserRouter basename="/My-React-Portfolio-Website">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   );
