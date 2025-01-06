@@ -35,7 +35,7 @@ const ProjectPage = () => {
             &#8249;
           </button>
           <img
-            src={project.images[currentImageIndex]} // Should work now
+            src={project.titleImages[currentImageIndex]} // Should work now
             alt={project.title}
             className="project-image"
           />
