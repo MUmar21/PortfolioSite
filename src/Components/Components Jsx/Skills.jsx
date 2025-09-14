@@ -27,36 +27,61 @@ const Skills = () => {
     },
   ];
 
-  const services = [
+    const services = [
     {
       id: 1,
       title: 'Game Development & Design',
-      description: 'Full-cycle game development from scratch or improving existing games.',
+      description: 'Full-cycle game development from concept to launch.',
     },
     {
       id: 2,
-      title: '2D & 3D Games',
-      description: 'Developing both 2D and 3D games for various platforms.',
+      title: 'Game Design',
+      description: 'Innovative game design with engaging levels and experiences.',
     },
     {
       id: 3,
-      title: 'Single Player & Two Player Modes',
-      description: 'Creating engaging single-player and multiplayer modes.',
+      title: '2D & 3D Games',
+      description: 'Building immersive 2D and 3D games for all platforms.',
     },
     {
       id: 4,
       title: 'Mobile & PC Games',
-      description: 'Building games for mobile platforms and PC.',
+      description: 'Games tailored for mobile devices and PC.',
     },
     {
       id: 5,
-      title: 'Testing & Debugging',
-      description: 'Extensive game testing and bug fixing for smooth gameplay.',
+      title: 'Single Player & Two Player Modes',
+      description: 'Engaging solo and local multiplayer gameplay experiences.',
     },
     {
       id: 6,
+      title: 'Multiplayer Games',
+      description: 'Robust multiplayer features for connected gameplay.',
+    },
+    {
+      id: 7,
       title: 'Graphic Design',
-      description: 'Creative and impactful graphic design, delivering visually engaging assets that enhance the overall game experience.',
+      description: 'Eye-catching graphics and assets for your games.',
+    },
+    {
+      id: 8,
+      title: 'Game Optimization',
+      description: 'Performance tuning for fast, responsive gameplay.',
+    },
+    {
+      id: 9,
+      title: 'Testing & Debugging',
+      description: 'Thorough testing and bug fixing for smooth performance.',
+    },
+    {
+      id: 10,
+      title: 'Monetization & Ads',
+      description: 'Integrate Unity Ads, AdMob, and mediation for revenue.',
+    },
+    {
+      id: 11,
+      title: 'SDK Integration',
+      description: 'Add features like Firebase analytics and custom events.',
     },
   ];
 

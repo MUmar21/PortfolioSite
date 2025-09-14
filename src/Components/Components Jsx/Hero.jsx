@@ -24,7 +24,10 @@ function Hero() {
           <h2>I am Muhammad Umar</h2>
           <h1>Game Developer</h1>
           <p>
-          I am a versatile Developer with expertise in Unity, C#, and web technologies like HTML, CSS, JavaScript, and React. I create engaging 2D and 3D games for mobile, PC, and WebGL platforms, and build dynamic, responsive websites. Proficient in Git, GitHub, and Git LFS, I also have experience hosting sites on GitHub Pages. Skilled in UI design and integration, I ensure seamless user experiences across games and web applications. This portfolio, developed in React, showcases my ability to combine design and functionality. Whether working solo or in a team, I deliver high-quality projects that exceed expectations. </p>
+            I’m a versatile Game and Web Developer with a Bachelor’s degree in Computer Science and over 1 year of professional experience in game development. My core strengths lie in Unity, C#, and object-oriented programming, with a solid grasp of gameplay mechanics, level design, and performance optimization. I’ve developed a variety of game types—from hyper-casual mobile titles to PC and multiplayer experiences—bringing creative ideas to life through engaging, polished gameplay.
+            Alongside game development, I’m also proficient in web technologies like HTML, CSS, JavaScript, and React. I create responsive, dynamic websites and have experience deploying them using GitHub Pages. I'm skilled in Git, GitHub, and Git LFS, ensuring smooth version control and collaboration.
+            As a passionate gamer and problem-solver, I bring a player-focused mindset, write clean and maintainable code, and ensure cross-platform performance. Whether working solo or within a team, I’m committed to delivering high-quality digital experiences.
+          </p>
           {/* Work Experience Section */}
           <div className="work-experience">
             <h3>Work Experience:</h3>
@@ -55,7 +58,7 @@ function Hero() {
 
         {/* Hero Image */}
         <div className="about-image">
-          <img src="./images/m5.png" alt="About Me" />
+          <img src="./images/m.png" alt="About Me" />
         </div>
       </div>
     </section>
