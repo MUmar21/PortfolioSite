@@ -33,9 +33,9 @@ export const projectsData = [
         images: ["../public/images/E1.jpg", "../public/images/E2.jpg", "../public/images/E3.jpg", "../public/images/E4.jpg"],
         link: "",
         Category: "Gaming",
-        Client: "Section Soft"
+        Client: "Freelance"
     },
-      {
+    {
         title: "Archery Bow Shooting Game",
         description: "A hyper-casual mobile game featuring smooth and realistic archery mechanics across 50 handcrafted levels. Each stage introduces unique challenges to keep gameplay engaging. With a polished UI, daily rewards, unlockable skins, shop and spin wheel, plus integrated Unity Ads and player retention systems, the game offers a fun, optimized, and highly replayable experience.",
         titleImages: ["./images/Archery1.jpg", "./images/Archery2.jpg", "./images/Archery3.jpg","./images/Archery4.jpg", "./images/Archery5.jpg", "./images/Archery6.jpg", "./images/Archery7.jpg", "./images/Archery8.jpg", "./images/Archery9.jpg"],
@@ -53,7 +53,7 @@ export const projectsData = [
         Category: "Gaming",
         Client: "Section Soft"
     },
-        {
+    {
         title: "Car Stunt Game",
         description: "Car Stunt Game is an exciting and action-packed mobile driving game where players must navigate through challenging levels, reach checkpoints, and make it to the end of the map. The game features dynamic environments with various obstacles and hurdles, requiring players to skillfully avoid them while jumping off ramps for thrilling stunts. Each level presents unique challenges, keeping the gameplay fresh and engaging. With realistic car controls, the car accelerates, brakes, noses, and turns based on a true-to-life driving mechanism. Players can choose from multiple control options, including gyro, buttons, or steering wheel controls, offering a personalized driving experience. Additionally, players can purchase and select from a variety of cars, each with its own speed and specifications, allowing for customization and strategy. This fun and adventurous game is perfect for players who love to face challenges, perform exciting stunts, and choose the perfect car for the ride!",
         titleImages: ["./images/CarStunt1.jpg", "./images/CarStunt2.jpg", "./images/CarStunt3.jpg","./images/CarStunt4.jpg", "./images/CarStunt5.jpg","./images/CarStunt6.jpg", "./images/CarStunt7.jpg","./images/CarStunt8.jpg"],
@@ -70,6 +70,15 @@ export const projectsData = [
         link: "",
         Category: "Gaming",
         Client: "Section Soft"
+    },
+    {
+        title: "Word Checking Game",
+        description: "An engaging word puzzle game where players swipe through shuffled letters to form words from various categories such as animals, food, and sports. Featuring a dynamic word suggestion system, timer-based challenges, and a modular swipe input system, the game delivers fast-paced, interactive, and replayable word-matching fun.",
+        titleImages: ["./images/WC1.jpg", "./images/WC2.jpg", "./images/WC4.jpg","./images/WC3.jpg", "./images/WC5.jpg"],
+        images: ["../public/images/WC1.jpg", "../public/images/WC2.jpg", "../public/images/WC4.jpg", "../public/images/WC3.jpg", "../public/images/WC5.jpg"],
+        link: "",
+        Category: "Gaming",
+        Client: "Freelance"
     },
     {
         title: "Running Game",
