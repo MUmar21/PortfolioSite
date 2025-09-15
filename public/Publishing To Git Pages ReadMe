@@ -1,0 +1,12 @@
+// Commit the changes in the branch.
+// Push the changes
+// Update main branch
+// on terminal run this commands :
+1. npm run install (if not installed already)
+2. npm run build
+3. npm run deply
+
+// Wait for the Published message then wait few minutes for the changes to be updated.
+
+
+ // During developement run command "npm run dev" to start local host
