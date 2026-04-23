@@ -1,8 +1,17 @@
-/* App.css — Quantum Glass global wrapper */
+/* App.css */
+body {
+  background-color: var(--q-bg);
+  color: var(--q-text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; 
+}
+
 #root {
-  background-color: #07090F;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  background-color: var(--q-bg);
+  width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
 }

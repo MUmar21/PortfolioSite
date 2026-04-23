@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowLeft, ExternalLink, Tag, User, Layers } from 'lucide-react';
-import { projectsData } from './Projects';
+import { ChevronLeft, ChevronRight, ArrowLeft, ExternalLink, Tag, User, Layers, CheckCircle2, Code2 } from 'lucide-react';
+import { projectsData } from './ProjectsData'; 
 import '../Componenets Css/ProjectPage.css';
 
 function ProjectPage() {
@@ -21,7 +21,7 @@ function ProjectPage() {
     );
   }
 
-  const images = project.titleImages;
+  const images = project.images;
   const prev = () => setImgIdx(i => i === 0 ? images.length - 1 : i - 1);
   const next = () => setImgIdx(i => i === images.length - 1 ? 0 : i + 1);
 
@@ -32,7 +32,7 @@ function ProjectPage() {
       <div className="pp-orb pp-orb-a" aria-hidden />
       <div className="pp-orb pp-orb-b" aria-hidden />
 
-      {/* ── Back button (top-left, always visible) ── */}
+      {/* ── Back button ── */}
       <motion.button
         className="pp-back-btn"
         onClick={() => navigate(-1)}
@@ -47,68 +47,70 @@ function ProjectPage() {
 
       <div className="pp-layout">
 
-        {/* ══ LEFT COLUMN — Image gallery ══ */}
+        {/* ══ LEFT COLUMN — Sticky Image gallery ══ */}
         <motion.div
           className="pp-left"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Main image */}
-          <div className="pp-main-img-wrap">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={imgIdx}
-                src={`${import.meta.env.BASE_URL}${images[imgIdx].replace('./', '')}`}
-                alt={`${project.title} screenshot ${imgIdx + 1}`}
-                className="pp-main-img"
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.03 }}
-                transition={{ duration: 0.35 }}
-              />
-            </AnimatePresence>
+          <div className="pp-sticky-container">
+            {/* Main image */}
+            <div className="pp-main-img-wrap">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={imgIdx}
+                  src={`${import.meta.env.BASE_URL}${images[imgIdx].replace('./', '')}`}
+                  alt={`${project.title} screenshot ${imgIdx + 1}`}
+                  className="pp-main-img"
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.03 }}
+                  transition={{ duration: 0.35 }}
+                />
+              </AnimatePresence>
 
-            {/* Arrows */}
-            {images.length > 1 && (
-              <>
-                <button className="pp-arrow pp-arrow-l" onClick={prev} aria-label="Previous">
-                  <ChevronLeft size={20} />
-                </button>
-                <button className="pp-arrow pp-arrow-r" onClick={next} aria-label="Next">
-                  <ChevronRight size={20} />
-                </button>
-                <div className="pp-counter">{imgIdx + 1} / {images.length}</div>
-              </>
-            )}
+              {/* Arrows */}
+              {images.length > 1 && (
+                <>
+                  <button className="pp-arrow pp-arrow-l" onClick={prev} aria-label="Previous">
+                    <ChevronLeft size={20} />
+                  </button>
+                  <button className="pp-arrow pp-arrow-r" onClick={next} aria-label="Next">
+                    <ChevronRight size={20} />
+                  </button>
+                  <div className="pp-counter">{imgIdx + 1} / {images.length}</div>
+                </>
+              )}
 
-            {/* Corner accents */}
-            <span className="pp-corner pp-corner-tl" aria-hidden />
-            <span className="pp-corner pp-corner-br" aria-hidden />
-          </div>
-
-          {/* Thumbnail strip */}
-          {images.length > 1 && (
-            <div className="pp-thumbs">
-              {images.map((src, i) => (
-                <button
-                  key={i}
-                  className={`pp-thumb ${i === imgIdx ? 'active' : ''}`}
-                  onClick={() => setImgIdx(i)}
-                  aria-label={`View image ${i + 1}`}
-                >
-                  <img
-                    src={`${import.meta.env.BASE_URL}${src.replace('./', '')}`}
-                    alt=""
-                    loading="lazy"
-                  />
-                </button>
-              ))}
+              {/* Corner accents */}
+              <span className="pp-corner pp-corner-tl" aria-hidden />
+              <span className="pp-corner pp-corner-br" aria-hidden />
             </div>
-          )}
+
+            {/* Thumbnail strip */}
+            {images.length > 1 && (
+              <div className="pp-thumbs">
+                {images.map((src, i) => (
+                  <button
+                    key={i}
+                    className={`pp-thumb ${i === imgIdx ? 'active' : ''}`}
+                    onClick={() => setImgIdx(i)}
+                    aria-label={`View image ${i + 1}`}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}${src.replace('./', '')}`}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </motion.div>
 
-        {/* ══ RIGHT COLUMN — Project details ══ */}
+        {/* ══ RIGHT COLUMN — Project details & Blueprint ══ */}
         <motion.div
           className="pp-right"
           initial={{ opacity: 0, x: 30 }}
@@ -125,14 +127,27 @@ function ProjectPage() {
           <div className="pp-meta-grid">
             <div className="pp-meta-item">
               <User size={14} />
-              <span className="pp-meta-label">Client</span>
-              <span className="pp-meta-value">{project.Client}</span>
+              <div className="pp-meta-text">
+                <span className="pp-meta-label">Client</span>
+                <span className="pp-meta-value">{project.Client}</span>
+              </div>
             </div>
             <div className="pp-meta-item">
               <Layers size={14} />
-              <span className="pp-meta-label">Category</span>
-              <span className="pp-meta-value">{project.Category}</span>
+              <div className="pp-meta-text">
+                <span className="pp-meta-label">Category</span>
+                <span className="pp-meta-value">{project.Category}</span>
+              </div>
             </div>
+            {project.role && (
+              <div className="pp-meta-item">
+                <Code2 size={14} />
+                <div className="pp-meta-text">
+                  <span className="pp-meta-label">Role</span>
+                  <span className="pp-meta-value">{project.role}</span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Tags */}
@@ -145,14 +160,30 @@ function ProjectPage() {
             </div>
           )}
 
-          {/* Divider */}
           <div className="pp-divider" />
 
-          {/* Description */}
+          {/* Blueprint Section: Overview */}
           <div className="pp-desc-block">
-            <h2 className="pp-desc-label">Project Overview</h2>
-            <p className="pp-desc">{project.description}</p>
+            <h2 className="pp-section-label">Project Overview</h2>
+            <p className="pp-desc">{project.desc}</p>
           </div>
+
+          {/* Blueprint Section: Technical Highlights */}
+          {project.technicalHighlights && project.technicalHighlights.length > 0 && (
+            <div className="pp-desc-block pp-blueprint-block">
+              <h2 className="pp-section-label">Engineering & Features</h2>
+              <ul className="pp-feature-list">
+                {project.technicalHighlights.map((feature, idx) => (
+                  <li key={idx} className="pp-feature-item">
+                    <CheckCircle2 size={18} className="pp-feature-icon" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div className="pp-divider" />
 
           {/* CTA buttons */}
           <div className="pp-cta-row">

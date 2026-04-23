@@ -1,3 +1,7 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   index.css — Quantum Glass Design System v2
+   Fonts: Orbitron (display) + Outfit (body)
+   ═══════════════════════════════════════════════════════════════════════════ */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Outfit:wght@300;400;500;600&display=swap');
 
 /* ── Design tokens ────────────────────────────────────────────────────────── */
@@ -60,13 +64,12 @@ img { display: block; max-width: 100%; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  /* background-size: contain; */
-  object-fit: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.08;
+  opacity: 0.045;
   pointer-events: none;
-  filter: saturate(0.7) brightness(0.6);
+  filter: saturate(0.2) brightness(0.6);
 }
 
 /* Scanline overlay — pure CSS, no image needed.
@@ -166,7 +169,7 @@ img { display: block; max-width: 100%; }
   backdrop-filter: blur(8px);
   color: var(--q-text);
 }
-.q-btn-ghost:hover { border-color: var(--q-border-hi); background: rgba(255, 255, 255, 0.07); }
+.q-btn-ghost:hover { border-color: var(--q-border-hi); background: rgba(255,255,255,0.07); }
 
 .q-btn-outline {
   background: transparent;
