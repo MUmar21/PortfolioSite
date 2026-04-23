@@ -1,29 +1,8 @@
+/* App.css — Quantum Glass global wrapper */
 #root {
-  /* background-color: #131120; */
-  background: radial-gradient(circle, rgb(21, 0, 115) 0%, rgb(0, 21, 51) 100%);  z-index: 1000;
-  /* background: #000517; */
+  background-color: #07090F;
   max-width: 100%;
   margin: 0 auto;
-  /* padding: 0.5rem; */
   text-align: center;
-  /* box-shadow: 0 0 5PX 5px rgba(0, 0, 0, 0.5); */
-
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .projects-grid {
-    flex-direction: column;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-
-  .contact-container {
-    width: 90%;
-  }
+  overflow-x: hidden;
 }

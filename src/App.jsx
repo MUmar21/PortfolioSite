@@ -1,81 +1,56 @@
-import { useState } from 'react';
+/**
+ * App.jsx
+ * GlassNav is now embedded in Hero.jsx — no separate Header or Navbar needed.
+ */
 import './App.css';
-import Header from './Components/Components Jsx/Header';
-import Hero from './Components/Components Jsx/Hero';
+import Hero    from './Components/Components Jsx/Hero';
+import Skills  from './Components/Components Jsx/Skills';
 import Projects from './Components/Components Jsx/Projects';
+import Tools   from './Components/Components Jsx/Tools';
+import Footer  from './Components/Components Jsx/Footer';
 import ProjectPage from './Components/Components Jsx/ProjectPage';
-import Navbar from './Components/Components Jsx/Navbar';
-import Skills from './Components/Components Jsx/Skills';
-import Tools from './Components/Components Jsx/Tools';
-import Footer from './Components/Components Jsx/Footer';
 import { motion } from 'framer-motion';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
-// Define animation settings
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  hidden:  { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };
+
+function Section({ children, amount = 0.1 }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeInUp}
+      viewport={{ once: true, amount }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 function MainContent() {
   const location = useLocation();
+  const isProjectPage = location.pathname.startsWith('/project/');
 
-  // Check if the current path is "/projectpage"
-  const isProjectPage = location.pathname === '/projectpage';
+  if (isProjectPage) return null;
 
   return (
-    <div>
-      {!isProjectPage && (
-        <>
-          <Header />
-          <Hero />
-          <Navbar />
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <Skills />
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            viewport={{ once: true, amount: 0.1 }}
-          >
-            <Projects />
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <Tools />
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <Footer />
-          </motion.div>
-        </>
-      )}
-    </div>
+    <>
+      <Hero />
+      <Section amount={0.15}><Skills /></Section>
+      <Section amount={0.08}><Projects /></Section>
+      <Section amount={0.1}><Tools /></Section>
+      <Section amount={0.2}><Footer /></Section>
+    </>
   );
 }
 
 function App() {
   return (
     <Routes>
-        <Route path="/" element={<MainContent />} />
-      {/* Update this route to include :title */}
+      <Route path="/"               element={<MainContent />} />
       <Route path="/project/:title" element={<ProjectPage />} />
     </Routes>
   );

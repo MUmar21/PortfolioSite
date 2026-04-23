@@ -1,68 +1,68 @@
+/* index.css — Quantum Glass Design System globals */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  --q-bg:      #07090F;
+  --q-surface: #131722;
+  --q-cyan:    #00F0FF;
+  --q-purple:  #8A2BE2;
+  --q-text:    #F8FAFC;
+  --q-muted:   #94A3B8;
+  --q-border:  rgba(255, 255, 255, 0.08);
+  --q-glass:   rgba(19, 23, 34, 0.72);
+  --font-display: 'Syne', 'Exo 2', sans-serif;
+  --font-body:    'DM Sans', 'Exo 2', sans-serif;
+  color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  background-color: var(--q-bg);
+  color: var(--q-text);
+  font-family: var(--font-body);
   min-height: 100vh;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+img { display: block; max-width: 100%; }
+
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--q-bg); }
+::-webkit-scrollbar-thumb { background: var(--q-purple); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--q-cyan); }
+::selection { background: rgba(0, 240, 255, 0.18); color: var(--q-cyan); }
+
+/* ── Shared utilities ─────────────────────────────────────────────────────── */
+.grad-text {
+  background: linear-gradient(90deg, var(--q-cyan), var(--q-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--q-cyan);
+  margin-bottom: 0.9rem;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--q-cyan);
+  opacity: 0.7;
 }
