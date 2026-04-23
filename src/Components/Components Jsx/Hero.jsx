@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 
 const CYAN   = '#00F0FF';
 const PURPLE = '#8A2BE2';
+  const openUpwork = () => window.open('https://www.upwork.com/freelancers/~01d3c8ad355e5adf9f?mp_source=share', '_blank', 'noopener,noreferrer');
 
 // ─── Nav ─────────────────────────────────────────────────────────────────────
 const navLinks = [
@@ -36,10 +37,8 @@ function GlassNav() {
           </Link>
         ))}
       </div>
-
-      <a href="mailto:umarsaddiq1212@gmail.com" className="nav-cta">
-        Hire Me
-      </a>
+      
+      <button className="nav-cta" onClick={openUpwork}>Hire Me</button>
     </motion.nav>
   );
 }
@@ -56,7 +55,6 @@ function Hero() {
   const bgUrl = `${import.meta.env.BASE_URL}images/bg.png`;
 
   const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  const openUpwork = () => window.open('https://www.upwork.com/freelancers/~01d3c8ad355e5adf9f?mp_source=share', '_blank', 'noopener,noreferrer');
 
   return (
     <>
