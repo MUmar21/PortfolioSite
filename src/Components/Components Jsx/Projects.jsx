@@ -102,7 +102,7 @@ function Projects() {
           <span className="section-eyebrow">Portfolio</span>
           <h2 className="pj-heading">Shipped <span className="grad-text">Projects</span></h2>
           <p className="pj-sub">
-            15 titles across mobile, PC, multiplayer, VR, and interactive installations — each built to production standards.
+            Multiple titles across mobile, PC, multiplayer, VR, and interactive installations — each built to production standards.
           </p>
         </div>
 

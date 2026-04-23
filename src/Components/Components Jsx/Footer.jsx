@@ -1,6 +1,3 @@
-/**
- * Footer.jsx — Quantum Glass
- */
 import { FaLinkedin, FaEnvelope, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import '../Componenets Css/Footer.css';
@@ -14,8 +11,8 @@ const navLinks = [
 
 const socials = [
   { href: 'https://www.linkedin.com/in/muhammad-umar-saddiq-967052233/', icon: FaLinkedin, label: 'LinkedIn' },
-  { href: 'YOUR_INSTAGRAM', icon: FaInstagram, label: 'Instagram' },
-  { href: 'YOUR_YOUTUBE',   icon: FaYoutube,   label: 'YouTube'   },
+  { href: 'https://www.instagram.com/mus_labs/', icon: FaInstagram, label: 'Instagram' },
+  { href: 'https://www.youtube.com/@muslabsofficial',   icon: FaYoutube,   label: 'YouTube'   },
   { href: 'mailto:umarsaddiq1212@gmail.com', icon: FaEnvelope, label: 'Email' },
 ];
 
@@ -33,7 +30,7 @@ function Footer() {
           <img src="./images/logo.png" alt="MUS" className="footer-logo" />
           <p className="footer-tagline">
             Crafting immersive game experiences &amp; scalable digital systems.
-            Remote-ready · Available worldwide.
+            Open to High-Impact Remote Roles & Freelance Partnerships Worldwide.
           </p>
           <div className="footer-socials">
             {socials.map(s => (
@@ -94,9 +91,9 @@ function Footer() {
       {/* Bottom bar */}
       <div className="footer-bottom">
         <p className="footer-copy">
-          © {new Date().getFullYear()} Muhammad Umar Saddiq · Designed &amp; built from Karachi, Pakistan
+          © {new Date().getFullYear()} · Designed &amp; built from Pakistan by Muhammad Umar Saddiq 
         </p>
-        <a href="/_UmarResume.pdf" download className="footer-cv-btn">
+        <a href="./UmarResume.pdf"  download="UmarResume.pdf" className="footer-cv-btn">
           Download CV
         </a>
       </div>

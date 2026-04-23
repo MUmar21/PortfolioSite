@@ -1,7 +1,3 @@
-/**
- * Skills.jsx — Quantum Glass v2
- * Added: bg image layer + scanlines + vignette
- */
 import { motion } from 'framer-motion';
 import '../Componenets Css/Skills.css';
 import {
@@ -57,7 +53,8 @@ function Skills() {
         <div className="skills-header">
           <span className="section-eyebrow">What I Build</span>
           <h2 className="sk-heading">Services &amp; <span className="grad-text">Capabilities</span></h2>
-          <p className="sk-sub">From multiplayer architecture to VR experiences — a full suite of game-engineering services for studios and product teams worldwide.</p>
+          <p className="sk-sub">Engineering scalable multiplayer ecosystems, high-performance cross-platform games, and custom Editor tools. I don't just build games; I architect the systems that power them.
+            A full suite of game-engineering services for studios and product teams worldwide.</p>
         </div>
         <div className="services-grid">
           {services.map((s, i) => <ServiceCard key={s.id} s={s} i={i} />)}

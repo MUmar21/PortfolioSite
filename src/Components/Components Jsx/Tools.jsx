@@ -2,21 +2,21 @@ import { motion } from 'framer-motion';
 import '../Componenets Css/Tools.css';
 
 const skillsData = [
-  { id: 1,  name: 'C#',           icon: './images/C.png',           level: 'Expert',     category: 'Language' },
-  { id: 2,  name: 'Unity',        icon: './images/unity.png',        level: 'Expert',     category: 'Engine' },
-  { id: 3,  name: 'GitHub',       icon: './images/Github.png',       level: 'Expert',     category: 'DevOps' },
-  { id: 4,  name: 'Firebase',     icon: './images/firebase.png',     level: 'Expert',     category: 'Backend' },
-  { id: 5,  name: 'AdMob / Ads',  icon: './images/admob.png',        level: 'Expert',     category: 'Monetization' },
-  { id: 6,  name: 'Mirror Net.',  icon: './images/mirror.png',       level: 'Expert',     category: 'Networking' },
-  { id: 7,  name: 'Photon',       icon: './images/photon.png',       level: 'Expert',     category: 'Networking' },
-  { id: 8,  name: 'MediaPipe',    icon: './images/mediapipe.png',    level: 'Advanced',   category: 'AI / CV' },
-  { id: 9,  name: 'Photoshop',    icon: './images/photoshop.png',    level: 'Expert',     category: 'Design' },
-  { id: 10, name: 'Premiere Pro', icon: './images/premiere-pro.png', level: 'Advanced',   category: 'Design' },
-  { id: 11, name: 'Blender',      icon: './images/blender.png',      level: 'Proficient', category: '3D' },
-  { id: 12, name: 'Figma',        icon: './images/Figma.png',        level: 'Proficient', category: 'Design' },
-  { id: 13, name: 'HTML / CSS',   icon: './images/hc.png',           level: 'Expert',     category: 'Web' },
-  { id: 14, name: 'JavaScript',   icon: './images/JS.png',           level: 'Proficient', category: 'Web' },
-  { id: 15, name: 'React',        icon: './images/React.png',        level: 'Proficient', category: 'Web' },
+  { id: 1,  name: 'C#',           icon: './images/C.png',           level: '',     category: 'Language' },
+  { id: 2,  name: 'Unity',        icon: './images/unity.png',        level: '',     category: 'Engine' },
+  { id: 3,  name: 'GitHub',       icon: './images/Github.png',       level: '',     category: 'DevOps' },
+  { id: 4,  name: 'Firebase',     icon: './images/firebase.png',     level: '',     category: 'Backend' },
+  { id: 5,  name: 'AdMob / Ads',  icon: './images/admob.png',        level: '',     category: 'Monetization' },
+  { id: 6,  name: 'Mirror Net.',  icon: './images/mirror.png',       level: '',     category: 'Networking' },
+  { id: 7,  name: 'Photon',       icon: './images/photon.png',       level: '',     category: 'Networking' },
+  { id: 8,  name: 'MediaPipe',    icon: './images/mediapipe.png',    level: '',   category: 'AI / CV' },
+  { id: 9,  name: 'Photoshop',    icon: './images/photoshop.png',    level: '',     category: 'Design' },
+  { id: 10, name: 'Premiere Pro', icon: './images/premiere-pro.png', level: '',   category: 'Design' },
+  { id: 11, name: 'Blender',      icon: './images/blender.png',      level: '', category: '3D' },
+  { id: 12, name: 'Figma',        icon: './images/Figma.png',        level: '', category: 'Design' },
+  { id: 13, name: 'HTML / CSS',   icon: './images/hc.png',           level: '',     category: 'Web' },
+  { id: 14, name: 'JavaScript',   icon: './images/JS.png',           level: '', category: 'Web' },
+  { id: 15, name: 'React',        icon: './images/React.png',        level: '', category: 'Web' },
 ];
 
 const levelColor = {
@@ -72,8 +72,8 @@ function Tools() {
             Tools &amp; <span className="grad-text">Expertise</span>
           </h2>
           <p className="tools-subheading">
-            The technologies I work with daily — across game engines, networking,
-            cloud backends, and creative tooling.
+            I bridge multiple domains — game engines, networked systems, cloud infrastructure, and 
+            creative tooling — to deliver complete, production-ready solutions.
           </p>
         </div>
 

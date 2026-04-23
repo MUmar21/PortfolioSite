@@ -1,9 +1,3 @@
-/**
- * Hero.jsx — Quantum Glass v2
- * Fonts: Orbitron (display) · Outfit (body)
- * Includes: GlassNav pill, bg image, scanlines, vignette, stat chips
- */
-
 import '../Componenets Css/Hero.css';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaEnvelope, FaInstagram, FaYoutube, FaArrowDown } from 'react-icons/fa';
@@ -86,49 +80,56 @@ function Hero() {
 
             <motion.span className="hero-eyebrow" variants={I}>
               <span className="eyebrow-pulse" />
-              Remote · Karachi, Pakistan · Open to Work
+              Remote · Pakistan · Open to Work
             </motion.span>
 
             <motion.p className="hero-name" variants={I}>Muhammad Umar Saddiq</motion.p>
 
             <motion.h1 className="hero-title" variants={I}>
-              Unity Game<br />
-              <span className="grad-text">Developer</span>
+              Lead Unity<br />
+              <span className="grad-text"> Developer</span>
             </motion.h1>
 
             <motion.h2 className="hero-subtitle" variants={I}>
-              &amp; Full-Stack System Architect
+              &amp; Full Stack Systems Architect
             </motion.h2>
 
             <motion.p className="hero-bio" variants={I}>
-              I architect scalable multiplayer systems, immersive VR experiences,
-              and cross-platform game solutions. 3+ shipped titles across mobile,
-              PC &amp; interactive installations.
+            I am a Technical Unity Developer with over 2 years of experience focused on the intersection of clean code and immersive gameplay. 
+            My approach is rooted in Systems Architecture ensuring every mechanic I build is modular, optimized, and ready to scale across
+            mobile, PC, and VR platforms. Whether I am developing complex AI behaviors, engineering multiplayer server-side logic, or creating 
+            custom Unity Editor tools to speed up production, my goal is always technical excellence. Beyond development, I am a technical 
+            mentor and content creator, sharing my knowledge of game engineering with a global audience on YouTube. I thrive in collaborative 
+            team environments and solo ventures alike, bringing a full-stack mindset to every interactive project I touch.
             </motion.p>
 
             <motion.div className="hero-tags" variants={I}>
-              {['Mirror / Photon','PlayFab','VR Dev','AI / ML','React · Python','C#'].map(t => <Tag key={t} c={t} />)}
+              {['C# / Python / React', 'Multiplayer (Mirror/Photon)','PlayFab / Firebase','VR Development','Editor Scripting','AI Systems', 'Monetization'].map(t => <Tag key={t} c={t} />)}
             </motion.div>
 
             <motion.div className="hero-expertise" variants={I}>
               <span className="expertise-label">Core Expertise</span>
               <ul>
-                <li><span className="li-d" />Unity &amp; C# — Multiplayer, VR &amp; Physics Simulation</li>
-                <li><span className="li-d" />Technical Trainer @ Cega — Instructional Design &amp; Mentorship</li>
-                <li><span className="li-d" />Full-Stack Web — React, JavaScript, Cloud Integration</li>
+                <li><span className="li-d" />Unity & C# — Multiplayer, Servers, VR, AI, Physics Simulation, Editor Scripting</li>
+                <li><span className="li-d" />Cross-Platform Development — Mobile, Desktop, XR</li>
+                <li><span className="li-d" />Design & Tooling — Figma, Photoshop, Premiere Pro</li>
+                <li><span className="li-d" />Technical Trainer at Cega & Content Creater</li>
+                <li><span className="li-d" />Web — React, JavaScript</li>
               </ul>
             </motion.div>
 
             <motion.div className="hero-btns" variants={I}>
               <button className="q-btn q-btn-primary" onClick={() => scrollTo('projects')}>View My Work</button>
               <button className="q-btn q-btn-ghost"   onClick={openUpwork}>Hire Me</button>
-              <a href="/_UmarResume.pdf" download className="q-btn q-btn-outline">Download CV</a>
+              <a href="./UmarResume.pdf" download="UmarResume.pdf" className="q-btn q-btn-outline">
+                Download CV
+              </a>              
             </motion.div>
 
             <motion.div className="hero-social" variants={I}>
               <a href="https://www.linkedin.com/in/muhammad-umar-saddiq-967052233/" target="_blank" rel="noopener noreferrer" className="soc-link" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="YOUR_INSTAGRAM" target="_blank" rel="noopener noreferrer" className="soc-link" aria-label="Instagram"><FaInstagram /></a>
-              <a href="YOUR_YOUTUBE"   target="_blank" rel="noopener noreferrer" className="soc-link" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://www.instagram.com/mus_labs/" target="_blank" rel="noopener noreferrer" className="soc-link" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.youtube.com/@muslabsofficial"   target="_blank" rel="noopener noreferrer" className="soc-link" aria-label="YouTube"><FaYoutube /></a>
               <a href="mailto:umarsaddiq1212@gmail.com" className="soc-link" aria-label="Email"><FaEnvelope /></a>
               <div className="soc-sep" />
               <span className="soc-email">umarsaddiq1212@gmail.com</span>
@@ -149,16 +150,16 @@ function Hero() {
               
               <img src="./images/avatar.png" alt="Muhammad Umar Saddiq" className="hero-avatar" />
 
-              <div className="hud-label hud-top">DEVELOPER · ARCHITECT</div>
-              <div className="hud-label hud-bottom">UNITY · C# · REACT</div>
+              <div className="hud-label hud-top">DEVELOPER</div>
+              <div className="hud-label hud-bottom">ARCHITECT</div>
             </motion.div>
 
             {/* Floating chips */}
             <motion.div className="stat-chip chip-a"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}>
-              <span className="chip-val">3+</span>
-              <span className="chip-lbl">Shipped Titles</span>
+              <span className="chip-val">20+</span>
+              <span className="chip-lbl">Shipped Projects</span>
             </motion.div>
 
             <motion.div className="stat-chip chip-b"
@@ -171,7 +172,7 @@ function Hero() {
             <motion.div className="stat-chip chip-c"
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}>
-              <span className="chip-val">5+</span>
+              <span className="chip-val">2+</span>
               <span className="chip-lbl">Years Experience</span>
             </motion.div>
 

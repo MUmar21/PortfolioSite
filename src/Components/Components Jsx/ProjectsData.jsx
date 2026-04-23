@@ -5,7 +5,7 @@ export const projectsData = [
     images: ["./images/kbk.png", "./images/kbk1.png", "./images/kbk2.png", "./images/kbk3.png", "./images/kbk4.png", "./images/kbk10.png", "./images/kbk6.png", "./images/kbk7.png", "./images/kbk12.png"], 
     link: "https://www.youtube.com/watch?v=wHYxLtUvvns", 
     Category: "3D Action-Adventure", 
-    Client: "Personal Project", 
+    Client: "Personal Project - FYP", 
     tags: ["Unity", "C#", "Mobile", "PC"],
     role: "Lead Unity Developer",
     technicalHighlights: [
@@ -167,9 +167,9 @@ export const projectsData = [
 ];
 
 export const STATS = [
-  { val: '15+', lbl: 'Games Shipped' },
-  { val: '5+', lbl: 'Years Experience' },
-  { val: '4', lbl: 'Studios & Clients' },
+  { val: '20+', lbl: 'Games Shipped' },
+  { val: '2+', lbl: 'Years Experience' },
+  { val: '10+', lbl: 'Studios & Clients' },
   { val: 'AAA', lbl: 'Quality Standard' },
 ];
 
