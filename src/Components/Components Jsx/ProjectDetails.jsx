@@ -1,4 +1,3 @@
-// ProjectDetail.js
 import React from 'react';
 import "../Componenets Css/ProjectDetails.css"
 

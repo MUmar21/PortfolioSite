@@ -1,132 +1,67 @@
-// SkillsSection.js
-import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import '../Componenets Css/Skills.css';
+import {
+  Cpu, Globe, Database, Eye, Glasses, Activity,
+  Zap, Layout, DollarSign, BarChart3, Rocket, Wrench
+} from 'lucide-react';
 
-const Skills = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const services = [
+  { id: 1,  icon: Cpu,        title: 'Core Systems Architecture',          desc: 'Engineering scalable, modular game frameworks in Unity that ensure long-term stability and easy feature expansion.' },
+  { id: 2,  icon: Globe,      title: 'Multiplayer & Network Engineering',   desc: 'Implementing robust real-time synchronization using Photon (PUN), Mirror, and Netcode for GameObjects.' },
+  { id: 3,  icon: Database,   title: 'Backend & LiveOps Integration',       desc: 'Developing persistent game worlds with PlayFab server logic, secure authentication, and global leaderboards.' },
+  { id: 4,  icon: Eye,        title: 'AI & Computer Vision',                desc: 'Integrating MediaPipe and MoveNet for advanced motion tracking, gesture recognition, and pose-driven mechanics.' },
+  { id: 5,  icon: Glasses,    title: 'Immersive VR Development',            desc: 'Designing high-fidelity Virtual Reality experiences with optimized physics and intuitive spatial UI/UX.' },
+  { id: 6,  icon: Activity,   title: 'Advanced Physics & Simulators',       desc: 'Creating high-accuracy simulation systems and complex physics-based gameplay for industrial or entertainment use.' },
+  { id: 7,  icon: Zap,        title: 'Technical Optimization & Profiling',  desc: 'Identifying bottlenecks and optimizing GPU/CPU performance, memory management, and draw calls for 60 FPS.' },
+  { id: 8,  icon: Layout,     title: 'Cross-Platform Deployment',           desc: 'Tailoring and porting high-performance builds across PC (Steam), Android, and iOS ecosystems.' },
+  { id: 9,  icon: DollarSign, title: 'Data-Driven Monetization',            desc: 'Strategic integration of Unity Ads, AdMob, and Mediation to maximize LTV without compromising experience.' },
+  { id: 10, icon: BarChart3,  title: 'Analytics & SDK Implementation',      desc: 'Implementing Firebase Analytics and custom event tracking to gain deep insights into player behavior.' },
+  { id: 11, icon: Rocket,     title: 'Rapid Prototyping & MVP Dev',         desc: 'Transforming core concepts into playable MVPs quickly to validate mechanics and secure project funding.' },
+  { id: 12, icon: Wrench,     title: 'Automated Tooling & Editor Scripting',desc: 'Building custom Unity Editor tools to automate workflows, localization, and asset management.' },
+];
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
+const cardV = {
+  hidden:  { opacity: 0, y: 24 },
+  visible: (i) => ({ opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22,1,0.36,1], delay: i * 0.05 } }),
+};
 
-  const skills = [
-    {
-      id: 1,
-      title: 'Unity Game Development',
-      description: 'Expert in creating both 2D and 3D games with Unity.',
-    },
-    {
-      id: 2,
-      title: 'C# Programming',
-      description: 'Proficient in C# coding for game logic, mechanics, and systems.',
-    },
-    {
-      id: 3,
-      title: 'Game Design',
-      description: 'Innovative game design with engaging levels and experiences.',
-    },
-  ];
-
-    const services = [
-    {
-      id: 1,
-      title: 'Game Development & Design',
-      description: 'Full-cycle game development from concept to launch.',
-    },
-    {
-      id: 2,
-      title: 'Game Design',
-      description: 'Innovative game design with engaging levels and experiences.',
-    },
-    {
-      id: 3,
-      title: '2D & 3D Games',
-      description: 'Building immersive 2D and 3D games for all platforms.',
-    },
-    {
-      id: 4,
-      title: 'Mobile & PC Games',
-      description: 'Games tailored for mobile devices and PC.',
-    },
-    {
-      id: 5,
-      title: 'Single Player & Two Player Modes',
-      description: 'Engaging solo and local multiplayer gameplay experiences.',
-    },
-    {
-      id: 6,
-      title: 'Multiplayer Games',
-      description: 'Robust multiplayer features for connected gameplay.',
-    },
-    {
-      id: 7,
-      title: 'Graphic Design',
-      description: 'Eye-catching graphics and assets for your games.',
-    },
-    {
-      id: 8,
-      title: 'Game Optimization',
-      description: 'Performance tuning for fast, responsive gameplay.',
-    },
-    {
-      id: 9,
-      title: 'Testing & Debugging',
-      description: 'Thorough testing and bug fixing for smooth performance.',
-    },
-    {
-      id: 10,
-      title: 'Monetization & Ads',
-      description: 'Integrate Unity Ads, AdMob, and mediation for revenue.',
-    },
-    {
-      id: 11,
-      title: 'SDK Integration',
-      description: 'Add features like Firebase analytics and custom events.',
-    },
-  ];
-
+function ServiceCard({ s, i }) {
+  const Icon = s.icon;
   return (
-    <section className="skills-section">
-      {/* <h2 className="section-title">My Skills & Expertise</h2>
-      <p className="section-description">
-        Discover my expertise and services in the world of game development.
-      </p>
-      <div className="accordion-container">
-        {skills.map((skill, index) => (
-          <div
-            className={`accordion-item ${activeIndex === index ? 'active' : ''}`}
-            key={skill.id}
-            onClick={() => toggleAccordion(index)}
-          >
-            <div className="accordion-header">
-              <span>{index + 1}. {skill.title}</span>
-              <span className="arrow">{activeIndex === index ? '↑' : '↓'}</span>
-            </div>
-            {activeIndex === index && (
-              <div className="accordion-content">
-                <p>{skill.description}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div> */}
+    <motion.div className="svc-card" variants={cardV} initial="hidden"
+      whileInView="visible" custom={i} viewport={{ once: false, amount: 0.08 }}
+      whileHover={{ y: -6, transition: { duration: 0.22 } }}>
+      <div className="svc-icon-ring"><Icon size={26} strokeWidth={1.5} /></div>
+      <h4 className="svc-title">{s.title}</h4>
+      <p  className="svc-desc">{s.desc}</p>
+    </motion.div>
+  );
+}
 
-      <div className="services-section">
-        <h3 className="services-title">Services I Offer</h3>
-        <p className="section-description">
-        Discover my expertise and services in the world of game development.
-      </p>
-        <div className="services-container">
-          {services.map(service => (
-            <div className="service-item" key={service.id}>
-              <h4>{service.title}</h4>
-              <p>{service.description}</p>
-            </div>
-          ))}
+function Skills() {
+  const bgUrl = `${import.meta.env.BASE_URL}images/bg.png`;
+  return (
+    <section className="skills-section" id="skills-section">
+      {/* Background layers */}
+      <div className="s-bg" style={{ backgroundImage: `url(${bgUrl})` }} aria-hidden />
+      <div className="s-scan"     aria-hidden />
+      <div className="s-vignette" aria-hidden />
+      <div className="sk-orb sk-orb-l" aria-hidden />
+      <div className="sk-orb sk-orb-r" aria-hidden />
+
+      <div className="skills-inner">
+        <div className="skills-header">
+          <span className="section-eyebrow">What I Build</span>
+          <h2 className="sk-heading">Services &amp; <span className="grad-text">Capabilities</span></h2>
+          <p className="sk-sub">Engineering scalable multiplayer ecosystems, high-performance cross-platform games, and custom Editor tools. I don't just build games; I architect the systems that power them.
+            A full suite of game-engineering services for studios and product teams worldwide.</p>
+        </div>
+        <div className="services-grid">
+          {services.map((s, i) => <ServiceCard key={s.id} s={s} i={i} />)}
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Skills;

@@ -1,29 +1,16 @@
-#root {
-  /* background-color: #131120; */
-  background: radial-gradient(circle, rgb(21, 0, 115) 0%, rgb(0, 21, 51) 100%);  z-index: 1000;
-  /* background: #000517; */
-  max-width: 100%;
-  margin: 0 auto;
-  /* padding: 0.5rem; */
-  text-align: center;
-  /* box-shadow: 0 0 5PX 5px rgba(0, 0, 0, 0.5); */
-
+body {
+  background-color: var(--q-bg);
+  color: var(--q-text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; 
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .projects-grid {
-    flex-direction: column;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-
-  .contact-container {
-    width: 90%;
-  }
+#root {
+  background-color: var(--q-bg);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
