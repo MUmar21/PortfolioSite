@@ -89,9 +89,9 @@ function Hero() {
             </motion.h1>
 
             <motion.h2 className="hero-subtitle" variants={I}>
-              &amp; Full Stack Systems Architect
+              Full Stack Systems Architect <br/> &amp; Unity Game Development Trainer
             </motion.h2>
-
+ 
             <motion.p className="hero-bio" variants={I}>
             I am a Technical Unity Developer with over 2 years of experience focused on the intersection of clean code and immersive gameplay. 
             My approach is rooted in Systems Architecture ensuring every mechanic I build is modular, optimized, and ready to scale across
