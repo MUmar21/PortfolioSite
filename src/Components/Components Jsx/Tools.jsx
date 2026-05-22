@@ -16,6 +16,7 @@ const skillsData = [
   { id: 12, name: 'Figma',        icon: './images/Figma.png',        level: '', category: 'Design' },
   { id: 13, name: 'HTML / CSS',   icon: './images/hc.png',           level: '',     category: 'Web' },
   { id: 14, name: 'JavaScript',   icon: './images/JS.png',           level: '', category: 'Web' },
+  { id: 15, name: 'Python',        icon: './images/python.png',        level: '', category: 'Web' },
   { id: 15, name: 'React',        icon: './images/React.png',        level: '', category: 'Web' },
 ];
 

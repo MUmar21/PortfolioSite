@@ -4,7 +4,8 @@
 // on terminal run this commands :
 1. npm run install (if not installed already)
 2. npm run build
-3. npm run deply
+3. npm run deploy
+4. If deploy fail try clean cache npx gh-pages-clean
 
 // Wait for the Published message then wait few minutes for the changes to be updated.
 
