@@ -71,7 +71,7 @@ export const projectsData = [
   { 
     title: "Scene Optimizer Pro", 
     desc: "A comprehensive, high-performance Unity Editor extension designed to audit and optimize scene-specific resources. The tool provides real-time analytics for textures, 3D models, and UI assets, allowing developers to visualize memory footprints and execute batch optimizations directly within the editor. By automating the identification of memory bottlenecks and providing guided compression workflows, it significantly reduces build sizes and improves runtime performance for multi-platform projects.",
-    images: ["./images/SO_1.jpg", "./images/SO_2.jpg", "./images/SO_3.jpg", "./images/SO_4.png", "./images/SO_5.jpg", "./images/SO_6.png", "./images/SO_7.png"], 
+    images: ["./images/SO_1.jpg", "./images/SO_2.jpg", "./images/SO_3.jpg", "./images/SO_4.jpg", "./images/SO_5.jpg", "./images/SO_6.jpg", "./images/SO_7.jpg", "./images/SO_8.jpg"], 
     link: "", 
     Category: "Unity Editor Tools / DevOps & Optimization", 
     Client: "MUS Labs", 
