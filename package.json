@@ -1,13 +1,13 @@
 {
-  "homepage": "https://MUmar21.github.io/MUS-HOME",
-  "name": "my-portfolio-website",
+  "homepage": "https://MUSLabs.github.io/home",
+  "name": "MUSLabs-Website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/MUmar21/My-React-Portfolio-Website",
+    "deploy": "gh-pages -d dist -r https://github.com/MUSLabs/Portfolio",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
