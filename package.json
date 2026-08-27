@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/MUSLabs/Portfolio",
+    "deploy": "gh-pages -d dist -r https://github.com/MUmar21/Portfolio",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
