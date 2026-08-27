@@ -1,71 +1,94 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../Componenets Css/Tools.css';
 
-const skillsData = [
-  { id: 1,  name: 'C#',           icon: './images/C.png',           level: '',     category: 'Language' },
-  { id: 2,  name: 'Unity',        icon: './images/unity.png',        level: '',     category: 'Engine' },
-  { id: 3,  name: 'GitHub',       icon: './images/Github.png',       level: '',     category: 'DevOps' },
-  { id: 4,  name: 'Firebase',     icon: './images/firebase.png',     level: '',     category: 'Backend' },
-  { id: 5,  name: 'AdMob / Ads',  icon: './images/admob.png',        level: '',     category: 'Monetization' },
-  { id: 6,  name: 'Mirror Net.',  icon: './images/mirror.png',       level: '',     category: 'Networking' },
-  { id: 7,  name: 'Photon',       icon: './images/photon.png',       level: '',     category: 'Networking' },
-  { id: 8,  name: 'MediaPipe',    icon: './images/mediapipe.png',    level: '',   category: 'AI / CV' },
-  { id: 9,  name: 'Photoshop',    icon: './images/photoshop.png',    level: '',     category: 'Design' },
-  { id: 10, name: 'Premiere Pro', icon: './images/premiere-pro.png', level: '',   category: 'Design' },
-  { id: 11, name: 'Blender',      icon: './images/blender.png',      level: '', category: '3D' },
-  { id: 12, name: 'Figma',        icon: './images/Figma.png',        level: '', category: 'Design' },
-  { id: 13, name: 'HTML / CSS',   icon: './images/hc.png',           level: '',     category: 'Web' },
-  { id: 14, name: 'JavaScript',   icon: './images/JS.png',           level: '', category: 'Web' },
-  { id: 15, name: 'Python',        icon: './images/python.png',        level: '', category: 'Web' },
-  { id: 15, name: 'React',        icon: './images/React.png',        level: '', category: 'Web' },
+// ─── Data — grouped by category ───────────────────────────────────────────────
+const categories = [
+  {
+    id: 'engines',
+    label: 'Engines & Tools',
+    items: [
+      { name: 'Unity',        icon: './images/unity.png'        },
+      { name: 'Unreal Engine 5', icon: './images/unreal.png'    },
+      { name: 'GitHub',       icon: './images/Github.png'       },
+      { name: 'Firebase',     icon: './images/firebase.png'     },
+      { name: 'PlayFab',      icon: './images/photon.png'       },
+      { name: 'Mirror Net.',  icon: './images/mirror.png'       },
+      { name: 'Photon',       icon: './images/photon.png'       },
+      { name: 'AdMob / Ads',  icon: './images/admob.png'        },
+      { name: 'MediaPipe',    icon: './images/mediapipe.png'    },
+    ],
+  },
+  {
+    id: 'languages',
+    label: 'Languages',
+    items: [
+      { name: 'C#',           icon: './images/C.png'            },
+      { name: 'C++',          icon: './images/C.png'            },
+      { name: 'Python',       icon: './images/python.png'       },
+      { name: 'JavaScript',   icon: './images/JS.png'           },
+      { name: 'HTML / CSS',   icon: './images/hc.png'           },
+      { name: 'React',        icon: './images/React.png'        },
+    ],
+  },
+  {
+    id: 'design',
+    label: 'Design & Creative',
+    items: [
+      { name: 'Blender',      icon: './images/blender.png'      },
+      { name: 'Figma',        icon: './images/Figma.png'        },
+      { name: 'Photoshop',    icon: './images/photoshop.png'    },
+      { name: 'Premiere Pro', icon: './images/premiere-pro.png' },
+    ],
+  },
 ];
 
-const levelColor = {
-  'Expert':     'var(--q-cyan)',
-  'Advanced':   '#a78bfa',
-  'Proficient': 'var(--q-muted)',
-};
-
-const cardVariants = {
-  hidden:  { opacity: 0, scale: 0.88 },
+// ─── Animation variants ───────────────────────────────────────────────────────
+const cardV = {
+  hidden:  { opacity: 0, scale: 0.9, y: 12 },
   visible: (i) => ({
-    opacity: 1, scale: 1,
-    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1], delay: (i % 5) * 0.06 }
+    opacity: 1, scale: 1, y: 0,
+    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: (i % 5) * 0.055 },
   }),
 };
 
+const panelV = {
+  hidden:  { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
+};
+
+// ─── Single tool card ─────────────────────────────────────────────────────────
 function ToolCard({ skill, index }) {
   return (
     <motion.div
       className="tool-card"
-      variants={cardVariants}
+      variants={cardV}
       initial="hidden"
       whileInView="visible"
       custom={index}
-      viewport={{ once: true, amount: 0.1 }}
-      whileHover={{ y: -5, scale: 1.04, transition: { duration: 0.2 } }}
+      viewport={{ once: false, amount: 0.1 }}
+      whileHover={{ y: -4, scale: 1.04, transition: { duration: 0.18 } }}
     >
       <div className="tool-icon-wrap">
         <img src={skill.icon} alt={skill.name} className="tool-icon" loading="lazy" />
       </div>
       <p className="tool-name">{skill.name}</p>
-      <span
-        className="tool-level"
-        style={{ color: levelColor[skill.level] ?? 'var(--q-muted)' }}
-      >
-        {skill.level}
-      </span>
     </motion.div>
   );
 }
 
+// ─── Tools Section ────────────────────────────────────────────────────────────
 function Tools() {
+  const [activeTab, setActiveTab] = useState('engines');
+  const active = categories.find(c => c.id === activeTab);
+
   return (
     <section className="tools-section" id="tools">
       <div className="tools-orb tools-orb-a" aria-hidden />
       <div className="tools-orb tools-orb-b" aria-hidden />
 
       <div className="tools-inner">
+
         {/* Header */}
         <div className="tools-header">
           <span className="section-eyebrow">Tech Stack</span>
@@ -73,17 +96,37 @@ function Tools() {
             Tools &amp; <span className="grad-text">Expertise</span>
           </h2>
           <p className="tools-subheading">
-            I bridge multiple domains — game engines, networked systems, cloud infrastructure, and 
-            creative tooling — to deliver complete, production-ready solutions.
+            Game engines, programming languages, and creative software — the full stack
+            I use to take a project from concept to shipped product.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="tools-grid">
-          {skillsData.map((s, i) => (
-            <ToolCard key={s.id} skill={s} index={i} />
+        {/* Category tabs */}
+        <div className="tools-tabs">
+          {categories.map(cat => (
+            <button
+              key={cat.id}
+              className={`tools-tab ${activeTab === cat.id ? 'active' : ''}`}
+              onClick={() => setActiveTab(cat.id)}
+            >
+              {cat.label}
+            </button>
           ))}
         </div>
+
+        {/* Grid — animates when tab changes */}
+        <motion.div
+          key={activeTab}
+          className="tools-grid"
+          variants={panelV}
+          initial="hidden"
+          animate="visible"
+        >
+          {active.items.map((s, i) => (
+            <ToolCard key={s.name} skill={s} index={i} />
+          ))}
+        </motion.div>
+
       </div>
     </section>
   );

@@ -1,27 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ── Design tokens ────────────────────────────────────────────────────────── */
+/* ── Design Tokens ──────────────────────────────────────────────────────────
+   Palette: Midnight Slate + Warm Gold
+   Rationale: Sophisticated, warm, human — reads senior engineer not hobbyist
+   ──────────────────────────────────────────────────────────────────────── */
 :root {
-  --q-bg:        #07090F;
-  --q-surface:   #0D1117;
-  --q-surface2:  #131722;
-  --q-cyan:      #00F0FF;
-  --q-purple:    #8A2BE2;
-  --q-cyan-dim:  rgba(0, 240, 255, 0.08);
-  --q-purple-dim:rgba(138, 43, 226, 0.08);
-  --q-text:      #F0F4F8;
-  --q-muted:     #8896A8;
-  --q-border:    rgba(255, 255, 255, 0.07);
-  --q-border-hi: rgba(0, 240, 255, 0.22);
-  --q-glass:     rgba(13, 17, 23, 0.75);
-  --q-glass-hi:  rgba(19, 23, 34, 0.85);
+  /* Backgrounds */
+  --bg:          #0C0F1A;
+  --surface:     #131929;
+  --surface-2:   #1C2236;
+  --surface-3:   #242A40;
 
-  --font-display: 'Orbitron', 'Exo 2', sans-serif;
-  --font-body:    'Outfit', 'Exo 2', sans-serif;
+  /* Gold accent — the single bold choice */
+  --gold:        #C9A96E;
+  --gold-light:  #DEC28E;
+  --gold-dim:    rgba(201, 169, 110, 0.10);
+  --gold-border: rgba(201, 169, 110, 0.22);
 
-  /* Glow helpers */
-  --glow-cyan:   0 0 24px rgba(0, 240, 255, 0.25), 0 0 60px rgba(0, 240, 255, 0.1);
-  --glow-purple: 0 0 24px rgba(138, 43, 226, 0.25), 0 0 60px rgba(138, 43, 226, 0.1);
+  /* Blue secondary — depth, not decoration */
+  --blue:        #3A6FBF;
+  --blue-dim:    rgba(58, 111, 191, 0.12);
+  --blue-border: rgba(58, 111, 191, 0.28);
+
+  /* Text */
+  --text:        #EAE6DE;
+  --text-muted:  #8A8FA8;
+  --text-faint:  #5A5F72;
+
+  /* Borders & Glass */
+  --border:      rgba(255, 255, 255, 0.07);
+  --border-warm: rgba(201, 169, 110, 0.14);
+  --glass:       rgba(19, 25, 41, 0.80);
+  --glass-warm:  rgba(28, 34, 54, 0.88);
+
+  /* Glows — used sparingly */
+  --glow-gold:   0 0 28px rgba(201, 169, 110, 0.18), 0 0 60px rgba(201, 169, 110, 0.07);
+  --glow-blue:   0 0 24px rgba(58, 111, 191, 0.20);
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* Spacing scale */
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   1.5rem;
+  --space-xl:   2.5rem;
+  --space-2xl:  4rem;
+  --space-3xl:  7rem;
+
+  /* Radius */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-pill: 999px;
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 0.25s var(--ease-out);
 
   color-scheme: dark;
   font-synthesis: none;
@@ -30,47 +68,71 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Reset ────────────────────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* ── Reset ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--q-bg);
-  color: var(--q-text);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
 }
-a { color: inherit; text-decoration: none; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; }
-img { display: block; max-width: 100%; }
 
-/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 4px; }
-::-webkit-scrollbar-track  { background: var(--q-bg); }
-::-webkit-scrollbar-thumb  { background: linear-gradient(to bottom, var(--q-cyan), var(--q-purple)); border-radius: 2px; }
-::selection { background: rgba(0, 240, 255, 0.2); color: var(--q-cyan); }
+::-webkit-scrollbar-track  { background: var(--bg); }
+::-webkit-scrollbar-thumb  {
+  background: linear-gradient(to bottom, var(--gold), var(--blue));
+  border-radius: 2px;
+}
+::selection {
+  background: rgba(201, 169, 110, 0.18);
+  color: var(--gold-light);
+}
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   SHARED SECTION BACKGROUND SYSTEM
-   Usage in JSX: <div className="s-bg" style={{ backgroundImage:`url(...)` }} aria-hidden />
-   ═══════════════════════════════════════════════════════════════════════════ */
-
-/* The bg image layer (added via inline style from JSX) */
+/* ── Shared Background System ───────────────────────────────────────────────
+   Usage: <div className="s-bg" style={{ backgroundImage:`url(...)` }} />
+   ──────────────────────────────────────────────────────────────────────── */
 .s-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  /* background-size: contain; */
-  object-fit: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.08;
+  opacity: 0.03;
   pointer-events: none;
-  filter: saturate(0.7) brightness(0.6);
+  filter: saturate(0) brightness(0.8);
 }
 
-/* Scanline overlay — pure CSS, no image needed.
-   Creates horizontal CRT-style scan lines for "game engine UI" depth. */
 .s-scan {
   position: absolute;
   inset: 0;
@@ -80,12 +142,11 @@ img { display: block; max-width: 100%; }
     0deg,
     transparent,
     transparent 3px,
-    rgba(0, 0, 0, 0.09) 3px,
-    rgba(0, 0, 0, 0.09) 4px
+    rgba(0, 0, 0, 0.06) 3px,
+    rgba(0, 0, 0, 0.06) 4px
   );
 }
 
-/* Vignette — darkens the very edges of each section */
 .s-vignette {
   position: absolute;
   inset: 0;
@@ -93,84 +154,144 @@ img { display: block; max-width: 100%; }
   pointer-events: none;
   background: radial-gradient(
     ellipse at center,
-    transparent 55%,
-    rgba(7, 9, 15, 0.55) 100%
+    transparent 50%,
+    rgba(12, 15, 26, 0.65) 100%
   );
 }
 
-/* ── Global text utilities ────────────────────────────────────────────────── */
+/* ── Global Text Utilities ──────────────────────────────────────────────── */
 .grad-text {
-  background: linear-gradient(110deg, var(--q-cyan) 0%, #b060ff 100%);
+  background: linear-gradient(110deg, var(--gold) 0%, var(--gold-light) 60%, #E8D5B0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+.grad-text-blue {
+  background: linear-gradient(110deg, var(--blue) 0%, #6A9FDF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section eyebrow label */
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.55em;
+  gap: 0.6em;
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--q-cyan);
+  color: var(--gold);
   margin-bottom: 1rem;
 }
 .section-eyebrow::before {
   content: '';
   display: inline-block;
-  width: 20px;
+  width: 24px;
   height: 1px;
-  background: var(--q-cyan);
-  box-shadow: 0 0 6px var(--q-cyan);
+  background: var(--gold);
+  opacity: 0.7;
 }
 
-/* ── Glass card utility ───────────────────────────────────────────────────── */
+/* ── Glass Card ─────────────────────────────────────────────────────────── */
 .glass {
-  background: var(--q-glass);
+  background: var(--glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--q-border);
+  border: 1px solid var(--border);
 }
 
-/* ── Button system ────────────────────────────────────────────────────────── */
+.glass-warm {
+  background: var(--glass-warm);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-warm);
+}
+
+/* ── Button System ──────────────────────────────────────────────────────── */
 .q-btn {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0.72em 1.6em;
-  border-radius: 999px;
+  letter-spacing: 0.02em;
+  padding: 0.75em 1.7em;
+  border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.45em;
   white-space: nowrap;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.25s ease;
+  transition: transform var(--transition), opacity var(--transition), box-shadow var(--transition);
 }
-.q-btn:hover { transform: translateY(-2px) scale(1.02); }
+.q-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+}
 
+/* Primary — gold filled */
 .q-btn-primary {
-  background: linear-gradient(130deg, var(--q-cyan), #9040ff);
-  color: #07090F;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #0C0F1A;
+  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.22);
 }
-.q-btn-primary:hover { box-shadow: var(--glow-cyan); }
+.q-btn-primary:hover {
+  box-shadow: var(--glow-gold);
+}
 
+/* Ghost — glass with warm border */
 .q-btn-ghost {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--q-border);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
   backdrop-filter: blur(8px);
-  color: var(--q-text);
+  color: var(--text);
 }
-.q-btn-ghost:hover { border-color: var(--q-border-hi); background: rgba(255, 255, 255, 0.07); }
+.q-btn-ghost:hover {
+  border-color: var(--border-warm);
+  background: rgba(201, 169, 110, 0.06);
+}
 
+/* Outline — gold border */
 .q-btn-outline {
   background: transparent;
-  border: 1px solid rgba(0, 240, 255, 0.35);
-  color: var(--q-cyan);
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
 }
-.q-btn-outline:hover { background: var(--q-cyan-dim); box-shadow: 0 0 16px rgba(0,240,255,0.15); }
+.q-btn-outline:hover {
+  background: var(--gold-dim);
+  box-shadow: 0 0 14px rgba(201, 169, 110, 0.12);
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────── */
+.section-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 169, 110, 0.15) 30%,
+    rgba(58, 111, 191, 0.15) 70%,
+    transparent 100%
+  );
+}
+.section-divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+/* ── Reduced Motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
