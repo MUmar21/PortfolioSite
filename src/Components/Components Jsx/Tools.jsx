@@ -24,7 +24,7 @@ const categories = [
     label: 'Languages',
     items: [
       { name: 'C#',           icon: './images/C.png'            },
-      { name: 'C++',          icon: './images/C.png'            },
+      { name: 'C++',          icon: './images/C++.png'            },
       { name: 'Python',       icon: './images/python.png'       },
       { name: 'JavaScript',   icon: './images/JS.png'           },
       { name: 'HTML / CSS',   icon: './images/hc.png'           },
@@ -39,6 +39,7 @@ const categories = [
       { name: 'Figma',        icon: './images/Figma.png'        },
       { name: 'Photoshop',    icon: './images/photoshop.png'    },
       { name: 'Premiere Pro', icon: './images/premiere-pro.png' },
+      { name: 'Jira', icon: './images/Jira.png' },
     ],
   },
 ];
