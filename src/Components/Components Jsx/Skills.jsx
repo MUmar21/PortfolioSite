@@ -11,13 +11,13 @@ const services = [
     id: 1,
     icon: Cpu,
     title: 'Game Systems Architecture',
-    desc: 'I design the foundations first — modular state machines, clean data flows, scalable component structures. The kind of codebase a second developer can jump into without a three-hour onboarding call.',
+    desc: 'I build game systems with a focus on clean architecture, modular components, and clear data flow, making projects easier to develop, maintain, debug, and extend as they grow.',
   },
   {
     id: 2,
     icon: Globe,
     title: 'Multiplayer & Networking',
-    desc: 'Shipped real multiplayer games using Mirror, Photon Fusion 2, and PlayFab. Client-server authority, RPCs, lag compensation — I know where the edge cases hide.',
+    desc: 'I build multiplayer systems with Mirror, Photon Fusion 2, and PlayFab, focusing on server-authoritative architecture, RPCs, state synchronization, matchmaking, and reliable networked gameplay.',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const services = [
     id: 4,
     icon: Eye,
     title: 'AI & Computer Vision',
-    desc: 'Integrated MediaPipe and MoveNet into Unity to turn a camera feed into game input — pose detection, gesture recognition, full-body tracking for interactive installations.',
+    desc: 'I can Integrate MediaPipe and MoveNet into Unity to turn a camera feed into game input — pose detection, gesture recognition, full-body tracking for interactive installations.',
   },
   {
     id: 5,
@@ -41,13 +41,13 @@ const services = [
     id: 6,
     icon: Activity,
     title: 'Physics & Simulation',
-    desc: 'From realistic car controllers to farming machinery with modular attachment systems — I build physics that feel right, not just look right.',
+    desc: 'From vehicle controllers to modular machinery systems, I develop responsive and reliable physics and simulation systems for interactive experiences.',
   },
   {
     id: 7,
     icon: Zap,
     title: 'Optimization & Profiling',
-    desc: 'I profile before I guess. Draw call reduction, texture compression, Unity Addressables for async asset loading and memory control, GC spike elimination, ANR fixes — whatever it takes to hit 60 FPS on a mid-range Android device.',
+    desc: 'I use profiling and data-driven optimization to improve draw calls, texture memory, asset loading, and GC performance, while resolving memory issues, ANRs, and crashes to deliver smooth and stable experiences across target platforms.',  
   },
   {
     id: 8,
@@ -59,25 +59,25 @@ const services = [
     id: 9,
     icon: DollarSign,
     title: 'Monetization Integration',
-    desc: 'Unity Ads, AdMob, mediation stacks, IAP — integrated cleanly so the game earns without punishing the player. I track LTV, not just install counts.',
+    desc: 'Unity Ads, AdMob, mediation stacks, IAP — integrated cleanly so the game earns without punishing the player.',
   },
   {
     id: 10,
     icon: BarChart3,
     title: 'Analytics & SDK Setup',
-    desc: 'Firebase Analytics with custom events, funnel tracking, and retention metrics. I set up dashboards that answer real product questions, not vanity numbers.',
+    desc: 'Firebase Analytics with custom events, funnel tracking, and retention metrics.',
   },
   {
     id: 11,
     icon: Rocket,
     title: 'Rapid Prototyping',
-    desc: 'I can take a mechanic from whiteboard to playable in a day. Useful for pitches, game jams, and killing bad ideas before they become expensive ones.',
+    desc: 'I can take a mechanic from whiteboard to playable prototype. Useful for pitches, game jams, and killing bad ideas before they become expensive ones.',
   },
   {
     id: 12,
     icon: Wrench,
     title: 'Custom Editor Tooling',
-    desc: 'Built and published Scene Optimizer Pro on the Unity Asset Store. I write Unity Editor scripts that save teams hours every week — automation, asset auditing, workflow tools.',
+    desc: 'I have built and published Scene Optimizer Pro on the Unity Asset Store. I write Unity Editor scripts that can save development time every week — automation, asset auditing, workflow tools.',
   },
 ];
 

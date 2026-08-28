@@ -186,7 +186,7 @@ function Hero() {
               VR applications, and multiplayer systems for studios and clients. My work covers
               the full cycle — gameplay programming, networking, backend integration, and
               performance optimization for Android, iOS, and PC. I also teach Unity development
-              at Cega Institute and share game dev content on YouTube.
+              at CEGA and share game dev content on YouTube.
             </motion.p>
 
             {/* Tags */}
@@ -206,13 +206,13 @@ function Hero() {
 
             {/* Expertise block */}
             <motion.div className="hero-expertise" variants={itemV}>
-              <span className="expertise-label">What I bring to a team</span>
+              <span className="expertise-label">Core Strengths</span>
               <ul>
-                <li><span className="li-d" />Unity & C# — multiplayer, VR, AI systems, physics, editor scripting</li>
-                <li><span className="li-d" />Unreal Engine 5 & C++ — gameplay systems, level scripting</li>
-                <li><span className="li-d" />Shipped on Android, iOS, PC and Quest headsets</li>
-                <li><span className="li-d" />Published on Unity Asset Store — Scene Optimizer Pro</li>
-                <li><span className="li-d" />Trained 50+ students in Unity at Cega Institute</li>
+                <li><span className="li-d" />Unity & C# — gameplay, multiplayer, VR/XR, AI, physics, editor tools</li>
+                <li><span className="li-d" />Unreal Engine 5 & C++ / Blueprints — gameplay systems and real-time 3D</li>
+                <li><span className="li-d" />Cross-platform — Android, iOS, PC, and Meta Quest</li>
+                <li><span className="li-d" />Product Ownership — Unity Asset Store published tool</li>
+                <li><span className="li-d" />Technical Training — 50+ Unity students</li>
               </ul>
             </motion.div>
 
