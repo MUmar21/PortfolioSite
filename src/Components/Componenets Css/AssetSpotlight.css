@@ -393,3 +393,24 @@
 @media (max-width: 520px) {
   .sp-img-strip { grid-template-columns: repeat(4, 1fr); gap: 0.35rem; }
 }
+
+/* ── Mobile badge size fix — stop covering the image ────────────────────── */
+@media (max-width: 700px) {
+  .sp-badge {
+    padding: 0.35rem 0.55rem;
+  }
+  .sp-badge-val {
+    font-size: 0.85rem;
+  }
+  .sp-badge-lbl {
+    font-size: 0.48rem;
+    letter-spacing: 0.03em;
+  }
+  .sp-badge-tl { top: 6px; left: 6px; }
+  .sp-badge-br { bottom: 6px; right: 6px; }
+}
+
+@media (max-width: 480px) {
+  /* Hide badges entirely on small phones — image is too small */
+  .sp-badge { display: none; }
+}
