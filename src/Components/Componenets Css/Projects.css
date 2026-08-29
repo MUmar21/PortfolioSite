@@ -565,3 +565,25 @@
   .pj-toggle { width: calc(100% - 2rem); }
   .pj-toggle-btn { padding: 0.7em 1.4em; font-size: 0.88rem; }
 }
+
+/* ── Mobile toggle button fix — text must not clip ──────────────────────── */
+@media (max-width: 700px) {
+  .pj-toggle {
+    width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* keep pill shape */
+  }
+  .pj-toggle-btn {
+    flex: 1;
+    padding: 0.7em 0.8em;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 0.35em;
+    min-width: 0; /* allow shrink */
+  }
+  /* Hide icon on very small so text fits */
+  @media (max-width: 380px) {
+    .pj-toggle-btn svg { display: none; }
+  }
+}

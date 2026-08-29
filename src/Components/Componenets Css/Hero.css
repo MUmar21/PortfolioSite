@@ -623,3 +623,77 @@
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE FIXES — overrides for all 6 issues
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 1. Nav — scrollable pill on mobile so all buttons fit */
+@media (max-width: 700px) {
+  .hero-nav {
+    width: calc(100% - 1.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.32rem 0.5rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+  .hero-nav::-webkit-scrollbar { display: none; }
+  .nav-logo-mark {
+    padding: 0.15em 0.5em 0.15em 0.2em;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+  .nav-logo-text { display: none; }
+  .nav-link,
+  .hero-nav button.nav-link {
+    padding: 0.38em 0.55em;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-cta {
+    font-size: 0.68rem;
+    padding: 0.4em 0.7em;
+    flex-shrink: 0;
+    margin-left: 0.15rem;
+  }
+}
+
+/* 2. Email always visible on mobile alongside social icons */
+@media (max-width: 880px) {
+  .soc-email {
+    display: flex !important;
+    font-size: 0.62rem;
+    word-break: break-all;
+  }
+  /* social row wraps on mobile */
+  .hero-social { flex-wrap: wrap; gap: 0.4rem; }
+}
+
+/* 3. Scroll cue — perfectly centred on mobile */
+@media (max-width: 700px) {
+  .scroll-cue {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+}
+
+/* 400px — hide email at truly tiny sizes */
+@media (max-width: 400px) {
+  .soc-email { display: none !important; }
+}

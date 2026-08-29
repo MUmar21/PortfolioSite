@@ -2,7 +2,7 @@ import '../Componenets Css/Hero.css';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaEnvelope, FaInstagram, FaYoutube, FaArrowDown } from 'react-icons/fa';
 import { Link, scroller } from 'react-scroll';
-import { Briefcase, Award } from 'lucide-react';
+import { Briefcase, Award, Package, GraduationCap } from 'lucide-react';
 
 const openUpwork = () =>
   window.open(
@@ -14,10 +14,14 @@ const openUpwork = () =>
 // ─── Scroll to projects section AND switch its tab ────────────────────────────
 const goToTab = (tab) => {
   scroller.scrollTo('projects', { smooth: true, duration: 700, offset: -80 });
-  // Small delay so scroll starts before the tab event fires
   setTimeout(() => {
     window.dispatchEvent(new CustomEvent('portfolio-tab-change', { detail: tab }));
   }, 200);
+};
+
+// ─── Scroll to any section id ─────────────────────────────────────────────────
+const goToSection = (id) => {
+  scroller.scrollTo(id, { smooth: true, duration: 700, offset: -80 });
 };
 
 // ─── Nav links ────────────────────────────────────────────────────────────────
@@ -74,27 +78,35 @@ function GlassNav() {
           </motion.div>
         ))}
 
-        {/* Project Showcase button — scrolls + selects projects tab */}
+        {/* Project Showcase button */}
         <motion.div variants={navLinkV}>
-          <button
-            className="nav-link"
-            onClick={() => goToTab('projects')}
-            aria-label="Go to Project Showcase"
-          >
+          <button className="nav-link" onClick={() => goToTab('projects')} aria-label="Projects">
             <Briefcase size={12} style={{ marginRight: '0.3em', opacity: 0.7 }} />
             Projects
           </button>
         </motion.div>
 
-        {/* Certificates button — scrolls + selects certificates tab */}
+        {/* Certificates button */}
         <motion.div variants={navLinkV}>
-          <button
-            className="nav-link"
-            onClick={() => goToTab('certificates')}
-            aria-label="Go to Certificates"
-          >
+          <button className="nav-link" onClick={() => goToTab('certificates')} aria-label="Certificates">
             <Award size={12} style={{ marginRight: '0.3em', opacity: 0.7 }} />
             Certificates
+          </button>
+        </motion.div>
+
+        {/* Asset Store button */}
+        <motion.div variants={navLinkV}>
+          <button className="nav-link" onClick={() => goToSection('asset-spotlight')} aria-label="Asset Store Tool">
+            <Package size={12} style={{ marginRight: '0.3em', opacity: 0.7 }} />
+            Asset Store
+          </button>
+        </motion.div>
+
+        {/* Training button */}
+        <motion.div variants={navLinkV}>
+          <button className="nav-link" onClick={() => goToSection('training')} aria-label="Training">
+            <GraduationCap size={12} style={{ marginRight: '0.3em', opacity: 0.7 }} />
+            Training
           </button>
         </motion.div>
       </motion.div>
@@ -186,7 +198,7 @@ function Hero() {
               VR applications, and multiplayer systems for studios and clients. My work covers
               the full cycle — gameplay programming, networking, backend integration, and
               performance optimization for Android, iOS, and PC. I also teach Unity development
-              at CEGA and share game dev content on YouTube.
+              at Cega Institute and share game dev content on YouTube.
             </motion.p>
 
             {/* Tags */}
@@ -206,13 +218,13 @@ function Hero() {
 
             {/* Expertise block */}
             <motion.div className="hero-expertise" variants={itemV}>
-              <span className="expertise-label">Core Strengths</span>
+              <span className="expertise-label">What I bring to a team</span>
               <ul>
-                <li><span className="li-d" />Unity & C# — gameplay, multiplayer, VR/XR, AI, physics, editor tools</li>
-                <li><span className="li-d" />Unreal Engine 5 & C++ / Blueprints — gameplay systems and real-time 3D</li>
-                <li><span className="li-d" />Cross-platform — Android, iOS, PC, and Meta Quest</li>
-                <li><span className="li-d" />Product Ownership — Unity Asset Store published tool</li>
-                <li><span className="li-d" />Technical Training — 50+ Unity students</li>
+                <li><span className="li-d" />Unity & C# — multiplayer, VR, AI systems, physics, editor scripting</li>
+                <li><span className="li-d" />Unreal Engine 5 & C++ — gameplay systems, level scripting</li>
+                <li><span className="li-d" />Shipped on Android, iOS, PC and Quest headsets</li>
+                <li><span className="li-d" />Published on Unity Asset Store — Scene Optimizer Pro</li>
+                <li><span className="li-d" />Trained 50+ students in Unity at Cega Institute</li>
               </ul>
             </motion.div>
 
