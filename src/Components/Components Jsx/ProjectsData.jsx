@@ -36,7 +36,7 @@ export const projectsData = [
     title: "Beat Saber VR",
     desc: "A VR rhythm game where the music generates the gameplay. I wrote a DSP algorithm that analyzes audio frequencies in real time and automatically spawns blocks, syncs lighting, and triggers haptics to the beat.",
     images: ["./images/BS_3.jpg","./images/BS_1.jpg","./images/BS_2.jpg","./images/BS_5.jpg","./images/BS_17.jpg","./images/BS_6.jpg","./images/BS_7.jpg","./images/BS_8.jpg","./images/BS_9.jpg","./images/BS_10.jpg","./images/BS_11.jpg","./images/BS_14.jpg","./images/BS_15.jpg","./images/BS_16.jpg"],
-    link: "",
+    link: "https://www.linkedin.com/posts/muhammad-umar-saddiq-967052233_unity-unity3d-gamedevelopment-activity-7490381164839436288-FXuj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADo0l98B2rrLa_L5iHxVuxbBis1bbvb7tj8",
     Category: "Virtual Reality / Rhythm Action",
     Client: "GOSI",
     tags: ["Unity VR","Audio DSP","Procedural Generation","XR Interaction Toolkit","Haptics","ScriptableObjects"],
@@ -64,6 +64,23 @@ export const projectsData = [
       "Infrastructure Optimization: Successfully executed a complex migration from Photon (PUN/Fusion) to Mirror to bypass proprietary cloud constraints, establishing a custom transport layer that allows direct communication with PlayFab's hosted servers.",
       "Synchronized Combat Systems: Developed a robust turn-based combat engine that handles character selection, dynamic avatar synchronization, and low-latency input processing for a seamless 1v1 multiplayer experience.",
       "Cloud Deployment & DevOps: Managed the end-to-end deployment pipeline, including server-side logic coding, build optimization, and remote debugging to ensure a bug-free, low-latency production environment.",
+    ],
+  },
+  {
+    title: "Virtual Office Metaverse",
+    desc: "A real-time multiplayer virtual office built with Unity WebGL and Photon Fusion. I engineered the in-world communication system that allows players to share their screen, camera, and microphone directly through interactive office TVs, with synchronized TV ownership, spatial audio, and multiplayer state management.",
+    images: ["./images/OM7.png","./images/OM1.png","./images/OM2.png","./images/OM3.png","./images/OM4.png","./images/OM5.png","./images/OM6.png", "./images/OM8.png","./images/OM9.png"],
+    link: "",
+    Category: "Multiplayer WebGL / Virtual Collaboration",
+    Client: "Section Soft",
+    tags: ["Unity","WebGL","Photon Fusion","LiveKit","WebRTC","Multiplayer"],
+    role: "Unity Developer & Streaming Systems Engineer",
+    technicalHighlights: [
+      "LiveKit WebGL Integration: Integrated LiveKit with Unity WebGL for real-time camera, microphone, and screen sharing between multiplayer players.",
+      "Interactive TV System: Developed networked TVs with screen/camera display, player ownership, one-TV-per-player rules, and synchronized multiplayer state using Photon Fusion.",
+      "Spatial Voice Communication: Implemented positional microphone audio with distance-based volume for natural in-office communication.",
+      "Media & Browser Lifecycle: Handled LiveKit track publishing, subscribing, muting, unpublishing, and browser-level screen-share termination with proper cleanup.",
+      "Multiplayer UI & Controls: Built dynamic Start/Stop controls for screen sharing and camera/microphone based on TV ownership and active player state."
     ],
   },
   // {
